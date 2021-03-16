@@ -6,10 +6,10 @@
 [node name="RoomView" type="Node2D"]
 
 [node name="Object" parent="." instance=ExtResource( 2 )]
-position = Vector2( 227.443, 492.415 )
+position = Vector2( 174.526, 493.675 )
 
 [node name="TestObject" parent="." instance=ExtResource( 1 )]
-position = Vector2( 698.934, 323.708 )
+position = Vector2( 572.942, 420.722 )
 
 [node name="TestObject2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 211.344, 132.2 )
+position = Vector2( 885.401, 565.613 )
