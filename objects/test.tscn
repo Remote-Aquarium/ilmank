@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
+
+[node name="TestObject" instance=ExtResource( 1 )]
+grabbable = true
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+position = Vector2( -145.89, -48.6125 )
+scale = Vector2( 8.52158, 4.79601 )
+polygon = PoolVector2Array( 0.0801659, 0.323252, 18.1915, 21.8994, 33.4681, 5.9929 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+position = Vector2( -133.585, -42.1897 )
+scale = Vector2( 6.00642, 2.40432 )
+polygon = PoolVector2Array( -1.95055, -2.04795, 24.275, 41.1604, 45.3921, 9.41441 )
