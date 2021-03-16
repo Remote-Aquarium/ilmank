@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="142.0956"
-     inkscape:cy="530.93933"
+     inkscape:zoom="2"
+     inkscape:cx="799.60946"
+     inkscape:cy="514.23294"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -14228,5 +14228,33 @@ hZSp07Rdld7ep60oxtHTovyP/9k=
        style="fill:#241f1c;stroke:none;stroke-width:0.01;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;opacity:0.1"
        d="m 189.98513,151.12685 0.77211,-0.0936 -0.004,0.91839 0.98234,-0.0305 0.0658,0.96352 -1.04255,0.12081 0.32981,1.63773 -1.09451,0.13574 0.0732,-1.63537 -1.0316,0.17917 -0.0726,-1.02294 1.01236,-0.0724 z"
        id="croix_vide" />
+    <rect
+       style="opacity:1;fill:#2b0000;fill-opacity:1;stroke:none;stroke-width:0.01;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4071"
+       width="10.437691"
+       height="20.67782"
+       x="215.47279"
+       y="111.42586" />
+    <g
+       id="etoile"
+       style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none"
+       transform="translate(29.701061,-27.308258)">
+      <path
+         style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.01;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 190.8445,147.72396 -0.72462,0.68332 -0.6752,-0.38759 -0.0781,0.0753 0.57907,0.88593 -0.48996,0.47044 0.0527,0.0854 c 0,0 0.78636,-0.22435 0.79872,-0.215 0.0124,0.009 0.0289,0.0197 0.0289,0.0197 0,0 0.29072,0.48326 0.38175,0.58671"
+         id="path4013-7" />
+      <path
+         style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.01;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 190.8445,147.72396 -0.10619,0.74013 0.9346,0.0356 -0.83909,0.6567 -0.0157,0.0392 -0.10044,0.73265"
+         id="path4015-3" />
+    </g>
+    <path
+       style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 221.09777,114.52918 -0.89919,1.0305 -0.0275,1.44866 0.97541,0.98131 -1.54669,-0.4296 -0.57476,-1.03914 0.0636,-1.31598 z"
+       id="lune" />
+    <path
+       style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.01;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 219.35196,126.3607 0.77211,-0.0936 -0.004,0.91839 0.98234,-0.0305 0.0658,0.96352 -1.04255,0.12081 0.32981,1.63773 -1.09451,0.13574 0.0732,-1.63537 -1.0316,0.17917 -0.0726,-1.02294 1.01236,-0.0724 z"
+       id="croix" />
   </g>
 </svg>
