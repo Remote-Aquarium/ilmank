@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background.jpg-3c1ee7bbff6a1283595ccc69bb1d6acd.stex"
+path="res://.import/carpet.png-2a7e1ecd65e47ac20181ad059e5b28d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background.jpg"
-dest_files=[ "res://.import/background.jpg-3c1ee7bbff6a1283595ccc69bb1d6acd.stex" ]
+source_file="res://assets/objects/carpet.png"
+dest_files=[ "res://.import/carpet.png-2a7e1ecd65e47ac20181ad059e5b28d5.stex" ]
 
 [params]
 
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

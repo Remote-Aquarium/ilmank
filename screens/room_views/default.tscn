@@ -1,15 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://objects/test.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/background.png" type="Texture" id=3]
+[ext_resource path="res://objects/furnitures/clock.tscn" type="PackedScene" id=4]
 
 [node name="RoomView" type="Node2D"]
 
-[node name="Object" parent="." instance=ExtResource( 2 )]
-position = Vector2( 174.526, 493.675 )
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 542.712, 367.791 )
+scale = Vector2( 0.691665, 0.684095 )
+texture = ExtResource( 3 )
 
-[node name="TestObject" parent="." instance=ExtResource( 1 )]
-position = Vector2( 572.942, 420.722 )
+[node name="objects" type="Node2D" parent="."]
 
-[node name="TestObject2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 885.401, 565.613 )
+[node name="shelf" parent="objects" instance=ExtResource( 2 )]
+position = Vector2( 179.559, 379.521 )
+
+[node name="lamp" parent="objects" instance=ExtResource( 1 )]
+position = Vector2( 640.079, 33.9795 )
+
+[node name="clock" parent="objects" instance=ExtResource( 4 )]
+position = Vector2( 166.579, 79.702 )

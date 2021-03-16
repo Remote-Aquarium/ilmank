@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lamp.png-cdb7c4fbcded34eaff2340c8ef5490a0.stex"
+path="res://.import/cursor_grab.png-2c89e28835ad2f5ce2d825d26f3863b1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/lamp.png"
-dest_files=[ "res://.import/lamp.png-cdb7c4fbcded34eaff2340c8ef5490a0.stex" ]
+source_file="res://assets/cursor/cursor_grab.png"
+dest_files=[ "res://.import/cursor_grab.png-2c89e28835ad2f5ce2d825d26f3863b1.stex" ]
 
 [params]
 

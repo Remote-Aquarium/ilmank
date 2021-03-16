@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/objects/clock.png" type="Texture" id=1]
+[ext_resource path="res://objects/base.tscn" type="PackedScene" id=2]
+
+[node name="clock" instance=ExtResource( 2 )]
+grabbable = true
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+position = Vector2( -4.72329, 10.4026 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PoolVector2Array( -57.6654, 16.9575, -9.64653, 60.611, 47.4999, 30.0535, 35.1117, -31.8976, -28.8687, -40.8772 )

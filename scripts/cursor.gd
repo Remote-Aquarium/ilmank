@@ -8,7 +8,7 @@ func _process(_delta):
 
 func set_grabbing(grabbing):
     if not grabbing:
-        $sprite.texture = preload("res://assets/cursor/cursor_default.svg")
+        $sprite.texture = preload("res://assets/cursor/cursor_default.png")
     else:
-        $sprite.texture = preload("res://assets/cursor/cursor_grab.svg")
+        $sprite.texture = preload("res://assets/cursor/cursor_grab.png")
 
