@@ -1,18 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/background.png" type="Texture" id=3]
 [ext_resource path="res://objects/furnitures/clock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/furnitures/carpet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/desktop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/furnitures/painting.tscn" type="PackedScene" id=7]
 
 [node name="RoomView" type="Node2D"]
 
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( -0.66452, 0.790573, 1085.73, 1.88199, 1089.73, 732.707, -5.63776, 733.706 )
+
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 542.712, 367.791 )
+position = Vector2( 543.518, 367.791 )
 scale = Vector2( 0.691665, 0.684095 )
 texture = ExtResource( 3 )
 
 [node name="objects" type="Node2D" parent="."]
+
+[node name="painting" parent="objects" instance=ExtResource( 7 )]
+position = Vector2( 534.427, 214.117 )
+grabbable = true
 
 [node name="shelf" parent="objects" instance=ExtResource( 2 )]
 position = Vector2( 179.559, 379.521 )
@@ -20,5 +30,11 @@ position = Vector2( 179.559, 379.521 )
 [node name="lamp" parent="objects" instance=ExtResource( 1 )]
 position = Vector2( 640.079, 33.9795 )
 
+[node name="carpet" parent="objects" instance=ExtResource( 5 )]
+position = Vector2( 594.737, 666.799 )
+
 [node name="clock" parent="objects" instance=ExtResource( 4 )]
-position = Vector2( 166.579, 79.702 )
+position = Vector2( 165.244, 90.3808 )
+
+[node name="desk" parent="objects" instance=ExtResource( 6 )]
+position = Vector2( 837.012, 418.779 )

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/objects/painting.png" type="Texture" id=2]
+
+[node name="painting" instance=ExtResource( 1 )]
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PoolVector2Array( -98.2928, 64.8365, -96.0479, -59.7567, 83.546, -65.3691, 99.2605, 59.2242 )

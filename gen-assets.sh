@@ -1,6 +1,8 @@
 #!/bin/sh
 # Ilmank (GWJ31) assets export script to extract elements from messy input svg file
 
+TO_EXPORT=${1:-".+"}
+
 rm -rf gen-input
 mkdir gen-input
 touch gen-input/.gdignore
@@ -18,6 +20,11 @@ function gen {
     local input="gen-input/$1.svg"
     local id="$2"
     local out_file="$3"
+    if [[ ! $id =~ $TO_EXPORT ]]; then
+        echo "Ignored file '$out_file' ($id)."
+        return
+    fi
+
     local target_width=${4:-256}
     local target_height="${5:-$target_width}"
     local max_required=$(( target_width > target_height ? target_width : target_height ))
@@ -47,12 +54,34 @@ function obj {
 
 # Objects
 
+mkdir -p assets/objects
 obj "bibliotheque" "shelf" 1024
+obj "tableau" "painting" 512
 obj "lampe" "lamp"
 obj "horloge" "clock"
 obj "tapis" "carpet" 1024 512
 
+obj "ordi_et_ombre" "computer" 512
+obj "pasu_1" "desk" 1024
+obj "cables" "cables"
+
+mkdir -p assets/drawers
+for (( i=1; i<=5; i++ )); do
+    gen "main" "tiroir_${i}_ouvert" "assets/drawers/$i-open.png"
+    gen "main" "tiroir_$i" "assets/drawers/$i-closed.png"
+done
+
+mkdir -p assets/screens
+for (( i=1; i<=1; i++ )); do
+    gen "main" "ecran_$i" "assets/screens/screen-$i.png" 512
+done
+
+# Background
+
 gen "main" "facade_et_sol" "assets/background.png" 1920 1080
 
+# UI
+
+mkdir -p assets/cursor
 gen "hands" "main_ouverte" "assets/cursor/cursor_default.png" 256
 gen "hands" "main_ferme" "assets/cursor/cursor_grab.png" 256
