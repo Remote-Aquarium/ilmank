@@ -23,18 +23,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="453.95622"
-     inkscape:cy="264.54527"
+     inkscape:zoom="1"
+     inkscape:cx="400.77304"
+     inkscape:cy="584.13151"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1800"
-     inkscape:window-height="1033"
-     inkscape:window-x="629"
-     inkscape:window-y="167"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
      showguides="false" />
   <metadata
      id="metadata1075">
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -77,7 +77,7 @@
        x="4.8023748"
        y="186.75803" />
     <g
-       id="g966"
+       id="lampe"
        transform="matrix(0.53625175,0,0,0.53625175,61.008147,72.391096)">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -477,7 +477,7 @@
        id="path1078"
        transform="scale(0.26458333)" />
     <g
-       id="g1144">
+       id="bibliotheque">
       <g
          id="g1004"
          transform="matrix(0.84330948,0,0,0.84330948,158.2816,4.177471)"
@@ -568,24 +568,6 @@
          id="path1088"
          transform="scale(0.26458333)" />
     </g>
-    <g
-       id="g1122"
-       transform="translate(7.14375,-30.95625)">
-      <ellipse
-         style="opacity:0.999;fill:#af1f16;fill-opacity:1;stroke:#690000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-         id="path1090"
-         cx="102.9529"
-         cy="236.81247"
-         rx="49.578499"
-         ry="9.728611" />
-      <ellipse
-         style="opacity:0.999;fill:#af1f16;fill-opacity:1;stroke:#690000;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-         id="path1090-4"
-         cx="113.11324"
-         cy="237.21631"
-         rx="26.847225"
-         ry="5.2681346" />
-    </g>
     <path
        sodipodi:type="star"
        style="opacity:0.999;fill:#916f6f;fill-opacity:1;stroke:none;stroke-width:0.290625;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
@@ -633,5 +615,13 @@
        d="m 18.242959,563.45019 c 0.0064,-23.11899 0.269403,-39.01283 0.636102,-38.4337 0.518244,0.81847 1.454431,0.65761 5.46925,-0.93978 2.664187,-1.06 6.515941,-2.82689 8.559453,-3.92641 3.699116,-1.99032 3.716816,-1.99241 4.019115,-0.47443 0.167,0.83858 1.609185,18.07099 3.204856,38.29424 1.595671,20.22326 3.0897,38.59919 3.320065,40.83542 l 0.418845,4.06586 H 31.051388 18.232132 Z"
        id="path1195"
        transform="scale(0.26458333)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.409894,197.65918 -10.757596,7.01582 3.180506,7.67064 70.532426,4.39658 38.35318,-6.64165 -22.63773,-11.03823 -44.5271,-1.77734 z"
+       id="path1197" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.138439px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 97.165335,201.60868 -5.62877,3.67093 1.66416,4.01356 36.905145,2.30045 20.06779,-3.47515 -11.84489,-5.77561 -23.29821,-0.92997 z"
+       id="path1197-4" />
   </g>
 </svg>
