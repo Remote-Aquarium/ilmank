@@ -1,7 +1,8 @@
 extends Area2D
 
-export (Texture) var open_texture;
-export var pull_shift_down = 0;
+export var code = 0
+export var pull_shift_down = 0
+export (Texture) var open_texture
 
 var initialTexture = null
 var pulled = false
@@ -14,4 +15,6 @@ func _on_drawer_input_event(_viewport, event, _shape_idx):
         pulled = !pulled
         $sprite.texture = open_texture if pulled else initialTexture
         $sprite.position += Vector2(0, (1 if pulled else -1) * pull_shift_down)
+        if pulled and code != 0:
+            get_parent().input_drawer_code(code)
 

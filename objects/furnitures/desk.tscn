@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/objects/desk.png" type="Texture" id=1]
 [ext_resource path="res://objects/base.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/drawers/3-open.png" type="Texture" id=12]
 [ext_resource path="res://assets/objects/cables.png" type="Texture" id=13]
 [ext_resource path="res://assets/drawers/1-open.png" type="Texture" id=14]
+[ext_resource path="res://objects/furnitures/drawers.gd" type="Script" id=15]
 
 [node name="desk" instance=ExtResource( 2 )]
 position = Vector2( 0, -0.529739 )
@@ -33,16 +34,19 @@ scale = Vector2( 0.354774, 0.354774 )
 texture = ExtResource( 13 )
 
 [node name="collision" type="CollisionPolygon2D" parent="." index="3"]
-position = Vector2( -70.7906, -35.3953 )
-polygon = PoolVector2Array( -118.757, 130.958, -133.463, -58.639, 244.634, -59.7047, 234.724, 130.486, 93.1424, 132.374, 87.0072, -15.8146, -101.296, -16.7584, -99.8799, 130.958 )
+position = Vector2( -70.8693, -35.3953 )
+polygon = PoolVector2Array( -118.757, 130.958, -133.463, -58.639, 242.712, -59.6607, 233.348, 130.437, 92.5071, 132.31, 92.6949, 107.257, 87.0072, -15.8146, -101.412, -17.0437, -101.447, 131.568 )
 
 [node name="drawers" type="Node2D" parent="." index="4"]
+script = ExtResource( 15 )
+codes_seq = [ 2, 4, 4 ]
 
 [node name="drawer1" parent="drawers" index="0" instance=ExtResource( 5 )]
 position = Vector2( -79.7629, -68.1383 )
 scale = Vector2( 1.17977, 1.17977 )
-open_texture = ExtResource( 14 )
+code = 1
 pull_shift_down = 2
+open_texture = ExtResource( 14 )
 
 [node name="sprite" parent="drawers/drawer1" index="0"]
 position = Vector2( -0.548096, 0.571716 )
@@ -55,8 +59,9 @@ polygon = PoolVector2Array( -64.9222, -9.71992, -61.6725, 9.77205, 66.0018, 11.5
 [node name="drawer2" parent="drawers" index="1" instance=ExtResource( 5 )]
 position = Vector2( 94.0955, -55.2652 )
 scale = Vector2( 0.986847, 0.986847 )
-open_texture = ExtResource( 9 )
+code = 2
 pull_shift_down = 5
+open_texture = ExtResource( 9 )
 
 [node name="sprite" parent="drawers/drawer2" index="0"]
 position = Vector2( 2.16496, -0.194499 )
@@ -69,8 +74,9 @@ polygon = PoolVector2Array( -64.9206, -18.6543, -53.0432, 19.0455, 63.7283, 18.0
 
 [node name="drawer3" parent="drawers" index="2" instance=ExtResource( 5 )]
 position = Vector2( 96.7531, -11.0169 )
-open_texture = ExtResource( 12 )
+code = 3
 pull_shift_down = 5
+open_texture = ExtResource( 12 )
 
 [node name="sprite" parent="drawers/drawer3" index="0"]
 position = Vector2( 0.396851, 0 )
@@ -83,8 +89,9 @@ polygon = PoolVector2Array( -63.1526, 18.6971, -58.3904, -17.0194, 65.0433, -13.
 [node name="drawer4" parent="drawers" index="3" instance=ExtResource( 5 )]
 position = Vector2( 92.8657, 36.5673 )
 scale = Vector2( 0.951769, 0.951769 )
-open_texture = ExtResource( 11 )
+code = 4
 pull_shift_down = 2
+open_texture = ExtResource( 11 )
 
 [node name="sprite" parent="drawers/drawer4" index="0"]
 texture = ExtResource( 3 )
@@ -94,8 +101,9 @@ polygon = PoolVector2Array( -58.3577, 17.3905, -64.3183, -16.9703, 60.5027, -16.
 
 [node name="drawer5" parent="drawers" index="4" instance=ExtResource( 5 )]
 position = Vector2( 94.0168, 64.3252 )
-open_texture = ExtResource( 10 )
+code = 5
 pull_shift_down = 5
+open_texture = ExtResource( 10 )
 
 [node name="sprite" parent="drawers/drawer5" index="0"]
 position = Vector2( 0.396851, 0 )
