@@ -125,9 +125,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568543"
-     inkscape:cx="150.77293"
-     inkscape:cy="361.94851"
+     inkscape:zoom="2"
+     inkscape:cx="1448.9269"
+     inkscape:cy="851.96209"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -2138,6 +2138,10 @@
        style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.279323px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 396.62798,196.81728 -0.49379,31.5031 15.01088,1.08632 -0.79003,-31.40435 z"
        id="path1666-6" />
+    <path
+       style="fill:#483737;fill-opacity:1;stroke:none;stroke-width:0.255352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 397.27854,198.88652 -0.45141,28.79949 13.72264,0.99309 -0.72223,-28.70922 z"
+       id="path1666-1" />
     <g
        id="g1869">
       <path
@@ -2393,8 +2397,83 @@
          transform="scale(0.26458333)" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#666666;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
        d="m 390.07986,212.065 2.75958,14.40583 -28.95198,-1.73057 1.68378,-13.18975 z"
        id="path2591" />
+    <path
+       style="fill:#999999;stroke:none;stroke-width:0.245439px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 367.93164,213.14076 -0.44272,3.48453 16.94464,1.12253 -0.16099,-2.89987 -1.52944,-1.61364 z"
+       id="path3319" />
+    <path
+       style="fill:#808080;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 366.2164,218.28125 22.65495,1.55442 1.78594,5.09323 -24.87084,-1.48828 z"
+       id="path3321" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 367.32522,219.45501 -0.0233,0.51449 6.08039,0.60804 -0.11694,-0.58466 z"
+       id="path3357" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.288659px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 367.00215,220.6477 -0.0277,0.51449 7.23734,0.60804 -0.13919,-0.58466 z"
+       id="path3357-5" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.245669px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 367.65547,221.86377 -0.0201,0.51449 5.24214,0.60804 -0.10082,-0.58466 z"
+       id="path3357-5-8" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.285014px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 374.60012,219.94612 -0.0271,0.51449 7.05572,0.60804 -0.1357,-0.58466 z"
+       id="path3357-5-8-4" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.255135px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 374.88069,221.16219 -0.0217,0.51449 5.65393,0.60804 -0.10874,-0.58466 z"
+       id="path3357-5-8-4-9" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.239574px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 374.78388,222.42505 -0.0191,0.51449 4.98527,0.60804 -0.0959,-0.58466 z"
+       id="path3357-5-8-4-9-6" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.239574px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 382.76541,220.34368 -0.0191,0.51449 4.98527,0.60804 -0.0959,-0.58466 z"
+       id="path3357-5-8-4-9-6-4" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.267669px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 382.06858,221.6533 -0.0238,0.51449 6.22309,0.60804 -0.11971,-0.58466 z"
+       id="path3357-5-8-4-9-6-4-8" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.288049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 381.57032,222.75244 -0.0276,0.51449 7.20679,0.60804 -0.13864,-0.58466 z"
+       id="path3357-5-8-4-9-6-4-8-0" />
+    <g
+       id="bouton_tapis_ferme"
+       transform="translate(60.076953,-9.8557291)">
+      <path
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.304581px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 385.09008,213.17899 0.0189,5.19692 4.94945,0.15229 v -3.75016 l -0.51398,-1.2564 -1.08507,-0.51398 z"
+         id="bouton_tapis_ferme-5" />
+      <path
+         style="fill:#cccccc;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 386.29132,214.38023 3.00511,1.25115 -3.06356,1.21608 z"
+         id="path3519" />
+    </g>
+    <g
+       id="bouton_tapis_ouvert">
+      <path
+         style="fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.000254658;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+         d="m 388.80559,218.611 c -0.73558,-0.0159 -1.78919,-0.0382 -2.34137,-0.0495 -0.55217,-0.0113 -1.06208,-0.0225 -1.13319,-0.0248 l -0.12926,-0.004 -0.0442,-0.0739 c -0.0244,-0.0407 -0.0442,-0.0745 -0.0442,-0.0751 0,-0.001 4.51588,0.13704 4.80574,0.14706 l 0.1398,0.005 -2.4e-4,-1.87886 -2.4e-4,-1.87886 -0.25793,-0.62998 -0.25793,-0.62998 -0.52568,-0.2493 -0.52568,-0.2493 0.0521,-0.002 0.0522,-0.002 0.51778,0.24338 c 0.28477,0.13386 0.52126,0.24692 0.5255,0.25125 0.004,0.004 0.12956,0.30243 0.27839,0.66247 l 0.27064,0.65461 0.011,1.86345 0.011,1.86345 -0.0299,0.0438 c -0.0165,0.0241 -0.0314,0.0435 -0.0332,0.0431 -0.003,-3.1e-4 -0.60523,-0.0137 -1.34084,-0.0296 z"
+         id="path3327" />
+      <g
+         id="bouton_tapis_ferme-7"
+         transform="translate(4.8e-4,0.00756)">
+        <path
+           style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.304581px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 385.09008,213.17899 0.0189,5.19692 4.94945,0.15229 v -3.75016 l -0.51398,-1.2564 -1.08507,-0.51398 z"
+           id="bouton_tapis_ferme-5-0" />
+        <path
+           style="fill:#cccccc;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 386.29132,214.38023 3.00511,1.25115 -3.06356,1.21608 z"
+           id="path3519-0" />
+      </g>
+    </g>
   </g>
 </svg>
