@@ -9,15 +9,13 @@
 script = ExtResource( 4 )
 
 [node name="default" type="Node2D" parent="." index="0"]
-visible = false
 
 [node name="sprite" type="Sprite" parent="default" index="0"]
-position = Vector2( -0.313557, -0.306709 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 1 )
 
 [node name="collision" type="CollisionPolygon2D" parent="default" index="1"]
-position = Vector2( 28.7838, 1.96931 )
+position = Vector2( 29.345, 1.96931 )
 scale = Vector2( 0.665307, 0.665307 )
 polygon = PoolVector2Array( -505.1, -21.8743, -418.935, -80.1069, -143.868, -82.4741, 236.301, -67.7976, 415.733, 22.1552, 103.265, 76.6004, -479.061, 39.6724 )
 

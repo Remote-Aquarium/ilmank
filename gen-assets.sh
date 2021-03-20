@@ -58,8 +58,6 @@ mkdir -p assets/objects
 obj "bibliotheque" "shelf" 1024
 obj "tableau" "painting" 512
 obj "lampe" "lamp"
-obj "tapis" "carpet" 1024 512
-obj "tapis_ouvert_et_ombre" "carpet_unlocked" 1024 512
 
 obj "tour" "computer" 512
 obj "ordi_et_ombre" "monitor" 512
@@ -88,6 +86,8 @@ gen "main" "croix_vide" "assets/totem/cross_placeholder.png" 64
 
 mkdir -p assets/clock
 obj "horloge" "clock"
+gen "main" "fond_levier" "assets/clock/clock_lever_background.png"
+gen "main" "levier" "assets/clock/lever.png" 128
 gen "main" "horloge_heure" "assets/clock/clock_settings.png" 1024
 gen "main" "aiguille_1" "assets/clock/clock_minutes.png" 128
 gen "main" "aiguille_2" "assets/clock/clock_hours.png" 128
@@ -96,6 +96,19 @@ gen "main" "bouton_1_1_ouvert" "assets/clock/time_up.png"
 gen "main" "bouton_2_2_ouvert" "assets/clock/time_down.png"
 gen "main" "bouton_heure_ferme" "assets/clock/time_up_pressed.png"
 gen "main" "bouton_2_ferme" "assets/clock/time_down_pressed.png"
+
+mkdir -p assets/panel
+obj "tapis" "carpet" 1024 512
+gen "main" "sous_tapis_plein" "assets/panel/panel_board.png" 1024 1024
+gen "main" "ombre_sous_tapis_ouvert" "assets/panel/panel_board_shadow.png" 1024 256
+gen "main" "batteries_pleines" "assets/panel/batteries_full.png"
+gen "main" "batteries_vides" "assets/panel/batteries_empty.png"
+
+mkdir -p assets/panel/diodes
+for (( i=1; i<=3; i++ )); do
+    gen "main" "diode_r_$i" "assets/panel/diodes/off-$i.png" 64
+    gen "main" "diode_v_$i" "assets/panel/diodes/on-$i.png" 64
+done
 
 # Background
 

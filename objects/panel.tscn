@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/panel/panel_board.png" type="Texture" id=2]
+[ext_resource path="res://assets/panel/batteries_empty.png" type="Texture" id=3]
+[ext_resource path="res://scripts/dsi/panel.gd" type="Script" id=4]
+[ext_resource path="res://assets/panel/panel_board_shadow.png" type="Texture" id=5]
+[ext_resource path="res://assets/panel/diodes/off-1.png" type="Texture" id=6]
+[ext_resource path="res://assets/panel/diodes/off-2.png" type="Texture" id=7]
+[ext_resource path="res://assets/panel/diodes/off-3.png" type="Texture" id=8]
+
+[node name="panel" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="1"]
+position = Vector2( 301.041, 261.94 )
+polygon = PoolVector2Array( -535.042, -130.94, -544.042, -151.94, -544.308, -320.272, -591.684, -324.514, -607.241, -364.112, -605.826, -375.426, -549.965, -411.489, -367.531, -414.317, -117.216, -404.417, 4.40665, -345.728, 5.11374, -338.657, -89.0415, -317.94, -88.0415, -140.94, -247.041, -109.94 )
+
+[node name="batteries" type="Area2D" parent="." index="2"]
+
+[node name="sprite" type="Sprite" parent="batteries" index="0"]
+position = Vector2( -134.743, 6.32303 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="collision" type="CollisionPolygon2D" parent="batteries" index="1"]
+position = Vector2( -21.3268, 5.05106 )
+polygon = PoolVector2Array( -182.332, -32.8597, -190.47, 27.4726, -36.693, 35.0493, -42.3053, -32.5791 )
+
+[node name="diodes" type="Node2D" parent="." index="3"]
+
+[node name="diode1" type="Sprite" parent="diodes" index="0"]
+position = Vector2( 115.823, 111.511 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="diode2" type="Sprite" parent="diodes" index="1"]
+position = Vector2( 150.058, 105.338 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="diode3" type="Sprite" parent="diodes" index="2"]
+position = Vector2( 179.804, 99.164 )
+scale = Vector2( 0.475, 0.475 )
+texture = ExtResource( 8 )
+
+[node name="shadow" type="Sprite" parent="." index="4"]
+position = Vector2( -15.5566, -21.4429 )
+scale = Vector2( 0.445, 0.445 )
+texture = ExtResource( 5 )
+[connection signal="area_entered" from="batteries" to="." method="_on_batteries_area_entered"]

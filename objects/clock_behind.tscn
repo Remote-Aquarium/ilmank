@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/clock/clock_lever_background.png" type="Texture" id=1]
+[ext_resource path="res://assets/clock/lever.png" type="Texture" id=2]
+[ext_resource path="res://scripts/dsi/lever.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "push_down"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("lever:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2.69522, -20.1821 ), Vector2( 1.75133, 0.111202 ) ]
+}
+
+[node name="lever" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 0, -1.7818 )
+scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 1 )
+
+[node name="collision" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0.23597, 0 )
+polygon = PoolVector2Array( -25.621, 19.4606, -22.3174, -36.9359, 26.5281, -36.228, 24.4044, 22.2923 )
+
+[node name="lever" type="Sprite" parent="."]
+position = Vector2( 2.69522, -20.1821 )
+rotation = -0.0433242
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="animator" type="AnimationPlayer" parent="."]
+anims/push_down = SubResource( 1 )
+[connection signal="input_event" from="." to="." method="_on_lever_input_event"]

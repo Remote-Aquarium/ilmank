@@ -17,3 +17,4 @@ func set_carpet(style):
     carpet_style.remove_child(collision)
     add_child(collision)
     self.current_style = carpet_style
+
