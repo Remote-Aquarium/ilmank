@@ -4,13 +4,12 @@
 [ext_resource path="res://objects/furnitures/totem.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/furnitures/monitor.tscn" type="PackedScene" id=3]
 
+[node name="desktop" type="Node2D"]
 
-[node name="desk" type="Node2D"]
-
-[node name="computer" parent="." instance=ExtResource( 3 )]
+[node name="monitor" parent="." instance=ExtResource( 3 )]
 position = Vector2( -15.7375, -63.6704 )
 
-[node name="desktop" parent="." instance=ExtResource( 1 )]
+[node name="desk" parent="." instance=ExtResource( 1 )]
 position = Vector2( 45.6789, 97.1451 )
 
 [node name="totem" parent="." instance=ExtResource( 2 )]

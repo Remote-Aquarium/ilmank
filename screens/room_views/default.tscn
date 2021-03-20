@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/clock/time_down.png" type="Texture" id=12]
 [ext_resource path="res://assets/clock/time_down_pressed.png" type="Texture" id=13]
 [ext_resource path="res://assets/fonts/adolphe.tres" type="DynamicFont" id=14]
+[ext_resource path="res://objects/furnitures/computer.tscn" type="PackedScene" id=15]
 
 [node name="RoomView" type="Node2D"]
 script = ExtResource( 8 )
@@ -48,6 +49,10 @@ target_seconds = 15
 
 [node name="desk" parent="objects" instance=ExtResource( 6 )]
 position = Vector2( 837.012, 418.779 )
+
+[node name="computer" parent="objects" instance=ExtResource( 15 )]
+position = Vector2( 274.667, 342.626 )
+grabbable = true
 
 [node name="ui_clock" type="Control" parent="."]
 visible = false
