@@ -59,6 +59,7 @@ obj "bibliotheque" "shelf" 1024
 obj "tableau" "painting" 512
 obj "lampe" "lamp"
 obj "tapis" "carpet" 1024 512
+obj "tapis_ouvert_et_ombre" "carpet_unlocked" 1024 512
 
 obj "tour" "computer" 512
 obj "ordi_et_ombre" "monitor" 512
