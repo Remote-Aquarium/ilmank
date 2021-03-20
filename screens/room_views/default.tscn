@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
@@ -8,11 +8,17 @@
 [ext_resource path="res://objects/desktop.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/furnitures/painting.tscn" type="PackedScene" id=7]
 [ext_resource path="res://screens/room_views/default.gd" type="Script" id=8]
+[ext_resource path="res://assets/clock/clock_settings.png" type="Texture" id=9]
+[ext_resource path="res://assets/clock/time_up_pressed.png" type="Texture" id=10]
+[ext_resource path="res://assets/clock/time_up.png" type="Texture" id=11]
+[ext_resource path="res://assets/clock/time_down.png" type="Texture" id=12]
+[ext_resource path="res://assets/clock/time_down_pressed.png" type="Texture" id=13]
+[ext_resource path="res://assets/fonts/adolphe.tres" type="DynamicFont" id=14]
 
 [node name="RoomView" type="Node2D"]
 script = ExtResource( 8 )
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="white_bg" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( -0.66452, 0.790573, 1085.73, 1.88199, 1089.73, 732.707, -5.63776, 733.706 )
 
 [node name="background" type="Sprite" parent="."]
@@ -36,7 +42,165 @@ position = Vector2( 594.737, 666.799 )
 
 [node name="clock" parent="objects" instance=ExtResource( 4 )]
 position = Vector2( 165.244, 90.3808 )
-grabbable = false
+target_hours = 8
+target_minutes = 20
+target_seconds = 15
 
 [node name="desk" parent="objects" instance=ExtResource( 6 )]
 position = Vector2( 837.012, 418.779 )
+
+[node name="ui_clock" type="Control" parent="."]
+visible = false
+margin_left = -1.12247
+margin_right = 1081.88
+margin_bottom = 724.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="ui_clock"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -256.0
+margin_right = 256.0
+margin_bottom = 256.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Control" parent="ui_clock"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="hours_up" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 408.959
+margin_top = 239.617
+margin_right = 664.959
+margin_bottom = 495.617
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minutes_up" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 553.757
+margin_top = 254.209
+margin_right = 809.757
+margin_bottom = 510.209
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seconds_up" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 658.146
+margin_top = 265.434
+margin_right = 914.146
+margin_bottom = 521.434
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hours_down" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 403.347
+margin_top = 382.17
+margin_right = 659.347
+margin_bottom = 638.17
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minutes_down" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 543.655
+margin_top = 397.884
+margin_right = 799.655
+margin_bottom = 653.884
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seconds_down" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 646.921
+margin_top = 407.986
+margin_right = 902.921
+margin_bottom = 663.987
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hours" type="Label" parent="ui_clock"]
+modulate = Color( 0.415686, 0.321569, 0.321569, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -145.97
+margin_top = -59.0594
+margin_right = -5.97021
+margin_bottom = 105.941
+rect_rotation = 2.71907
+custom_fonts/font = ExtResource( 14 )
+text = "BUG"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minutes" type="Label" parent="ui_clock"]
+modulate = Color( 0.415686, 0.321569, 0.321569, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -6.651
+margin_top = -46.346
+margin_right = 78.349
+margin_bottom = 118.654
+rect_rotation = 3.63186
+custom_fonts/font = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seconds" type="Label" parent="ui_clock"]
+modulate = Color( 0.415686, 0.321569, 0.321569, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 103.004
+margin_top = -32.5729
+margin_right = 243.004
+margin_bottom = 132.427
+rect_rotation = 3.63186
+custom_fonts/font = ExtResource( 14 )
+text = "I AM AN INCAPABLE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ui_clock/buttons/hours_up" to="objects/clock" method="_on_time_change" binds= [ "hours", 1 ]]
+[connection signal="pressed" from="ui_clock/buttons/minutes_up" to="objects/clock" method="_on_time_change" binds= [ "minutes", 1 ]]
+[connection signal="pressed" from="ui_clock/buttons/seconds_up" to="objects/clock" method="_on_time_change" binds= [ "seconds", 1 ]]
+[connection signal="pressed" from="ui_clock/buttons/hours_down" to="objects/clock" method="_on_time_change" binds= [ "hours", -1 ]]
+[connection signal="pressed" from="ui_clock/buttons/minutes_down" to="objects/clock" method="_on_time_change" binds= [ "minutes", -1 ]]
+[connection signal="pressed" from="ui_clock/buttons/seconds_down" to="objects/clock" method="_on_time_change" binds= [ "seconds", -1 ]]

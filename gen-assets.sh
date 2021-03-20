@@ -58,10 +58,10 @@ mkdir -p assets/objects
 obj "bibliotheque" "shelf" 1024
 obj "tableau" "painting" 512
 obj "lampe" "lamp"
-obj "horloge" "clock"
 obj "tapis" "carpet" 1024 512
 
-obj "ordi_et_ombre" "computer" 512
+obj "tour" "computer" 512
+obj "ordi_et_ombre" "monitor" 512
 obj "bureau_et_ombre" "desk" 1024
 obj "cables" "cables"
 
@@ -84,6 +84,17 @@ gen "main" "croix" "assets/totem/cross.png" 64
 gen "main" "lune_vide" "assets/totem/moon_placeholder.png" 64
 gen "main" "etoile_vide" "assets/totem/star_placeholder.png" 64
 gen "main" "croix_vide" "assets/totem/cross_placeholder.png" 64
+
+mkdir -p assets/clock
+obj "horloge" "clock"
+gen "main" "horloge_heure" "assets/clock/clock_settings.png" 1024
+gen "main" "aiguille_1" "assets/clock/clock_minutes.png" 128
+gen "main" "aiguille_2" "assets/clock/clock_hours.png" 128
+gen "main" "aiguille_3" "assets/clock/clock_seconds.png" 128
+gen "main" "bouton_1_1_ouvert" "assets/clock/time_up.png"
+gen "main" "bouton_2_2_ouvert" "assets/clock/time_down.png"
+gen "main" "bouton_heure_ferme" "assets/clock/time_up_pressed.png"
+gen "main" "bouton_2_ferme" "assets/clock/time_down_pressed.png"
 
 # Background
 

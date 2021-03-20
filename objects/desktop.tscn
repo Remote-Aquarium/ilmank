@@ -2,7 +2,8 @@
 
 [ext_resource path="res://objects/furnitures/desk.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/totem.tscn" type="PackedScene" id=2]
-[ext_resource path="res://objects/furnitures/computer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/furnitures/monitor.tscn" type="PackedScene" id=3]
+
 
 [node name="desk" type="Node2D"]
 

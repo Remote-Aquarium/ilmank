@@ -3,14 +3,26 @@ extends Node
 var current_grab = null
 
 var room = null
+var foreground_ui = null
 var cursor = null
 
 func _ready():
     change_scene()
 
+func _process(_delta):
+    if Input.is_action_just_released("esc") and foreground_ui != null:
+        foreground_ui.visible = false
+        self.foreground_ui = null
+
 func change_scene():
     room = $"/root/Game/RoomView"
     cursor = $"/root/Game/Cursor"
+
+func focus_foreground(node):
+    if foreground_ui != null:
+        foreground_ui.visible = false
+    self.foreground_ui = node
+    node.visible = true
 
 # Grabbing
 
@@ -34,6 +46,9 @@ func release(object):
 
 enum Features {
     PAINTING = 1 << 0,
+    CARPET_UNDERGROUND_1 = 1 << 2,
+    CARPET_UNDERGROUND_2 = 1 << 3,
+    CARPET_UNDERGROUND_3 = 1 << 4,
 }
 
 var unlocked_features = 0

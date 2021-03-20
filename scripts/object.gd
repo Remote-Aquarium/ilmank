@@ -25,9 +25,13 @@ func _on_Object_input_event(_viewport, _event, _shape_idx):
                 grab(true)
         elif not grabbable:
             pass
+    elif Input.is_action_just_released("click_zoom"):
+        click_zoom()
 
 func grab(grab):
     self.grabbing = grab
     if grab:
         self.get_parent().move_child(self, self.get_parent().get_child_count())
 
+func click_zoom():
+    pass
