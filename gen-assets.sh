@@ -62,7 +62,7 @@ obj "horloge" "clock"
 obj "tapis" "carpet" 1024 512
 
 obj "ordi_et_ombre" "computer" 512
-obj "pasu_1" "desk" 1024
+obj "bureau_et_ombre" "desk" 1024
 obj "cables" "cables"
 
 mkdir -p assets/drawers
@@ -76,9 +76,18 @@ for (( i=1; i<=1; i++ )); do
     gen "main" "ecran_$i" "assets/screens/screen-$i.png" 512
 done
 
+mkdir -p assets/totem
+obj "statue_vide" "totem"
+gen "main" "lune" "assets/totem/moon.png" 64
+gen "main" "etoile" "assets/totem/star.png" 64
+gen "main" "croix" "assets/totem/cross.png" 64
+gen "main" "lune_vide" "assets/totem/moon_placeholder.png" 64
+gen "main" "etoile_vide" "assets/totem/star_placeholder.png" 64
+gen "main" "croix_vide" "assets/totem/cross_placeholder.png" 64
+
 # Background
 
-gen "main" "facade_et_sol" "assets/background.png" 1920 1080
+gen "main" "sol_mur_et_ombre" "assets/background.png" 1920 1080
 
 # UI
 
