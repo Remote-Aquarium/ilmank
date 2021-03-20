@@ -31,3 +31,4 @@ texture = ExtResource( 3 )
 position = Vector2( 30.0437, 3.2292 )
 scale = Vector2( 0.665307, 0.665307 )
 polygon = PoolVector2Array( -508.41, -34.799, -421.298, -90.6645, -141.023, -94.452, 233.938, -81.1958, 414.79, 9.70395, 415.737, 21.0664, 162.923, 78.8256, 65.3947, 83.5599, -463.907, 65.5694, -492.313, 52.3132 )
+[connection signal="input_event" from="." to="." method="_on_carpet_input_event"]

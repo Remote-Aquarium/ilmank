@@ -85,8 +85,8 @@ gen "main" "etoile_vide" "assets/totem/star_placeholder.png" 64
 gen "main" "croix_vide" "assets/totem/cross_placeholder.png" 64
 
 mkdir -p assets/clock
-obj "horloge" "clock"
-gen "main" "fond_levier" "assets/clock/clock_lever_background.png"
+obj "horloge_et_trous" "clock"
+gen "main" "fond_horloge_et_trous" "assets/clock/clock_lever_background.png"
 gen "main" "levier" "assets/clock/lever.png" 128
 gen "main" "horloge_heure" "assets/clock/clock_settings.png" 1024
 gen "main" "aiguille_1" "assets/clock/clock_minutes.png" 128
@@ -96,6 +96,7 @@ gen "main" "bouton_1_1_ouvert" "assets/clock/time_up.png"
 gen "main" "bouton_2_2_ouvert" "assets/clock/time_down.png"
 gen "main" "bouton_heure_ferme" "assets/clock/time_up_pressed.png"
 gen "main" "bouton_2_ferme" "assets/clock/time_down_pressed.png"
+gen "main" "vis_1" "assets/clock/screw.png" 64
 
 mkdir -p assets/panel
 obj "tapis" "carpet" 1024 512

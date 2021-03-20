@@ -20,3 +20,7 @@ func refresh_enabled_diodes():
         var diodes = on_diodes if enabled_diodes > i else off_diodes
         get_node("diodes/diode%s" % str(i + 1)).texture = diodes[i] if len(diodes) > i else null
 
+func _on_panel_input_event(_viewport, _event, _shape_idx):
+    if Input.is_action_just_released("click") and not Global.room.get_node("animators/panel").is_playing():
+        Global.room.toggle_panel(false)
+

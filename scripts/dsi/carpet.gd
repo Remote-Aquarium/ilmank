@@ -18,3 +18,6 @@ func set_carpet(style):
     add_child(collision)
     self.current_style = carpet_style
 
+func _on_carpet_input_event(_viewport, _event, _shape_idx):
+    if Input.is_action_just_released("click") and current_style != null && current_style.name == "unlocked":
+        Global.room.toggle_panel(true)

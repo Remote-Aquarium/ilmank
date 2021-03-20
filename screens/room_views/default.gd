@@ -7,6 +7,11 @@ func unlock(feature):
     match feature:
         Global.Features.PAINTING:
             $"objects/painting".grabbable = true
+        Global.Features.CARPET_UNDERGROUND_1, \
+        Global.Features.CARPET_UNDERGROUND_2, \
+        Global.Features.CARPET_UNDERGROUND_3:
+            $objects/panel.enabled_diodes += 1
+            $objects/panel.refresh_enabled_diodes()
 
 func toggle_panel(state, animate=true):
     if state:
