@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
@@ -15,6 +15,22 @@
 [ext_resource path="res://assets/clock/time_down_pressed.png" type="Texture" id=13]
 [ext_resource path="res://assets/fonts/adolphe.tres" type="DynamicFont" id=14]
 [ext_resource path="res://objects/furnitures/computer.tscn" type="PackedScene" id=15]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float amount: hint_range(0.0, 5.0);
+
+void fragment() {
+	COLOR.rgb = textureLod(SCREEN_TEXTURE, SCREEN_UV, amount).rgb;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/amount = 3.0
+
+[sub_resource type="GradientTexture" id=3]
 
 [node name="RoomView" type="Node2D"]
 script = ExtResource( 8 )
@@ -52,13 +68,34 @@ position = Vector2( 274.667, 342.626 )
 grabbable = true
 
 [node name="desk" parent="objects" instance=ExtResource( 6 )]
-position = Vector2( 830.648, 415.243 )
+position = Vector2( 831.279, 413.982 )
+
+[node name="shaders" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1080.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="blur" type="TextureRect" parent="shaders"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ui_clock" type="Control" parent="."]
 visible = false
-margin_left = -1.12247
-margin_right = 1081.88
-margin_bottom = 724.0
+margin_right = 1080.0
+margin_bottom = 720.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

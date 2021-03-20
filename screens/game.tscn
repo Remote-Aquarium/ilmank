@@ -6,7 +6,5 @@
 [node name="Game" type="Node2D"]
 
 [node name="RoomView" parent="." instance=ExtResource( 1 )]
-position = Vector2( -9.41119, -10.1135 )
 
 [node name="Cursor" parent="." instance=ExtResource( 2 )]
-position = Vector2( 277.647, 117.466 )

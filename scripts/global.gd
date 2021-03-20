@@ -11,8 +11,7 @@ func _ready():
 
 func _process(_delta):
     if Input.is_action_just_released("esc") and foreground_ui != null:
-        foreground_ui.visible = false
-        self.foreground_ui = null
+        focus_foreground(null)
 
 func change_scene():
     room = $"/root/Game/RoomView"
@@ -22,7 +21,15 @@ func focus_foreground(node):
     if foreground_ui != null:
         foreground_ui.visible = false
     self.foreground_ui = node
-    node.visible = true
+    if node != null:
+        node.visible = true
+    check_blur(foreground_ui != null)
+
+func check_blur(blur_state):
+    if room != null:
+        var shaders = room.get_node("shaders")
+        if shaders != null:
+            shaders.visible = blur_state
 
 # Grabbing
 
