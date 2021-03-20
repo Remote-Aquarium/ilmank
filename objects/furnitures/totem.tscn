@@ -1,16 +1,38 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/totem.png" type="Texture" id=2]
+[ext_resource path="res://assets/totem/star_placeholder.png" type="Texture" id=3]
+[ext_resource path="res://assets/totem/moon_placeholder.png" type="Texture" id=4]
+[ext_resource path="res://assets/totem/cross_placeholder.png" type="Texture" id=5]
 
 [node name="totem" instance=ExtResource( 1 )]
 grabbable = true
 
 [node name="totem" type="Sprite" parent="." index="0"]
-position = Vector2( 0.00116348, -1.48788 )
+position = Vector2( 0.00116348, -1.66466 )
 rotation = -0.0174533
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
 
 [node name="collision" type="CollisionPolygon2D" parent="." index="1"]
+visible = false
 polygon = PoolVector2Array( -26.737, 61.9865, -15.1251, 46.6288, -14.0013, -38.4001, 5.47665, -66.868, 22.7072, -58.6273, 21.5834, -28.6611, 29.075, 14.7898, 2.48004, 47.7525, 18.9614, 61.6119 )
+
+[node name="placeholders" type="Node2D" parent="." index="2"]
+
+[node name="star" type="Sprite" parent="placeholders" index="0"]
+position = Vector2( 10.6307, 7.57975 )
+scale = Vector2( 0.225, 0.225 )
+texture = ExtResource( 3 )
+
+[node name="cross" type="Sprite" parent="placeholders" index="1"]
+position = Vector2( 13.7134, -50.3036 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+
+[node name="moon" type="Sprite" parent="placeholders" index="2"]
+position = Vector2( 1.00796, 32.0544 )
+rotation = 0.42296
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 4 )

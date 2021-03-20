@@ -13,4 +13,4 @@ position = Vector2( -15.7375, -63.6704 )
 position = Vector2( 45.6789, 97.1451 )
 
 [node name="totem" parent="." instance=ExtResource( 2 )]
-position = Vector2( 170.235, -59.8574 )
+position = Vector2( 168.347, -72.5997 )

@@ -23,36 +23,36 @@ script = ExtResource( 8 )
 polygon = PoolVector2Array( -0.66452, 0.790573, 1085.73, 1.88199, 1089.73, 732.707, -5.63776, 733.706 )
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 543.518, 367.791 )
+position = Vector2( 541.379, 366.271 )
 scale = Vector2( 0.691665, 0.684095 )
 texture = ExtResource( 3 )
 
 [node name="objects" type="Node2D" parent="."]
 
 [node name="painting" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 534.427, 214.117 )
+position = Vector2( 535.318, 203.426 )
 
 [node name="shelf" parent="objects" instance=ExtResource( 2 )]
 position = Vector2( 179.559, 379.521 )
 
 [node name="lamp" parent="objects" instance=ExtResource( 1 )]
-position = Vector2( 640.079, 33.9795 )
+position = Vector2( 636.515, 31.3068 )
 
 [node name="carpet" parent="objects" instance=ExtResource( 5 )]
 position = Vector2( 594.737, 666.799 )
 
 [node name="clock" parent="objects" instance=ExtResource( 4 )]
-position = Vector2( 165.244, 90.3808 )
+position = Vector2( 162.571, 89.4899 )
 target_hours = 8
 target_minutes = 20
 target_seconds = 15
 
-[node name="desk" parent="objects" instance=ExtResource( 6 )]
-position = Vector2( 837.012, 418.779 )
-
 [node name="computer" parent="objects" instance=ExtResource( 15 )]
 position = Vector2( 274.667, 342.626 )
 grabbable = true
+
+[node name="desk" parent="objects" instance=ExtResource( 6 )]
+position = Vector2( 830.648, 415.243 )
 
 [node name="ui_clock" type="Control" parent="."]
 visible = false
