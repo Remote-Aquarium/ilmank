@@ -25,17 +25,17 @@ func _ready():
     set_seconds(time['second'])
 
 func set_hours(time):
-    self.hours = time % 24
+    self.hours = int(fposmod(time, 24))
     hours_tick.seek(hours % 12)
     ui_clock.get_node("hours").text = str(hours).pad_zeros(2)
 
 func set_minutes(time):
-    self.minutes = time % 60;
+    self.minutes = int(fposmod(time, 60))
     minutes_tick.seek(minutes / 60.0);
     ui_clock.get_node("minutes").text = str(minutes).pad_zeros(2)
 
 func set_seconds(time):
-    self.seconds = time % 60;
+    self.seconds = int(fposmod(time, 60))
     seconds_tick.seek(seconds / 60.0)
     ui_clock.get_node("seconds").text = str(seconds).pad_zeros(2)
 

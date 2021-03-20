@@ -78,92 +78,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="buttons" type="Control" parent="ui_clock"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="hours_up" type="TextureButton" parent="ui_clock/buttons"]
-margin_left = 408.959
-margin_top = 239.617
-margin_right = 664.959
-margin_bottom = 495.617
-rect_scale = Vector2( 0.25, 0.25 )
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="minutes_up" type="TextureButton" parent="ui_clock/buttons"]
-margin_left = 553.757
-margin_top = 254.209
-margin_right = 809.757
-margin_bottom = 510.209
-rect_scale = Vector2( 0.25, 0.25 )
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="seconds_up" type="TextureButton" parent="ui_clock/buttons"]
-margin_left = 658.146
-margin_top = 265.434
-margin_right = 914.146
-margin_bottom = 521.434
-rect_scale = Vector2( 0.25, 0.25 )
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="hours_down" type="TextureButton" parent="ui_clock/buttons"]
-margin_left = 403.347
-margin_top = 382.17
-margin_right = 659.347
-margin_bottom = 638.17
-rect_scale = Vector2( 0.25, 0.25 )
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="minutes_down" type="TextureButton" parent="ui_clock/buttons"]
-margin_left = 543.655
-margin_top = 397.884
-margin_right = 799.655
-margin_bottom = 653.884
-rect_scale = Vector2( 0.25, 0.25 )
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="seconds_down" type="TextureButton" parent="ui_clock/buttons"]
-margin_left = 646.921
-margin_top = 407.986
-margin_right = 902.921
-margin_bottom = 663.987
-rect_scale = Vector2( 0.25, 0.25 )
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="hours" type="Label" parent="ui_clock"]
 modulate = Color( 0.415686, 0.321569, 0.321569, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -145.97
-margin_top = -59.0594
-margin_right = -5.97021
-margin_bottom = 105.941
+margin_left = -146.861
+margin_top = -64.4048
+margin_right = -6.86108
+margin_bottom = 100.595
 rect_rotation = 2.71907
 custom_fonts/font = ExtResource( 14 )
 text = "BUG"
@@ -177,10 +101,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -6.651
-margin_top = -46.346
-margin_right = 78.349
-margin_bottom = 118.654
+margin_left = -5.76013
+margin_top = -52.5823
+margin_right = 79.2399
+margin_bottom = 112.418
 rect_rotation = 3.63186
 custom_fonts/font = ExtResource( 14 )
 __meta__ = {
@@ -193,13 +117,89 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 103.004
-margin_top = -32.5729
-margin_right = 243.004
-margin_bottom = 132.427
+margin_left = 104.785
+margin_top = -45.0455
+margin_right = 790.785
+margin_bottom = 119.954
 rect_rotation = 3.63186
 custom_fonts/font = ExtResource( 14 )
 text = "I AM AN INCAPABLE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Control" parent="ui_clock"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="hours_up" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 408.959
+margin_top = 236.054
+margin_right = 664.959
+margin_bottom = 492.054
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minutes_up" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 550.194
+margin_top = 248.864
+margin_right = 806.194
+margin_bottom = 504.864
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seconds_up" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 658.146
+margin_top = 258.307
+margin_right = 914.146
+margin_bottom = 514.307
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hours_down" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 403.347
+margin_top = 375.043
+margin_right = 659.347
+margin_bottom = 631.043
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minutes_down" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 544.546
+margin_top = 387.194
+margin_right = 800.546
+margin_bottom = 643.194
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seconds_down" type="TextureButton" parent="ui_clock/buttons"]
+margin_left = 654.939
+margin_top = 398.187
+margin_right = 910.939
+margin_bottom = 654.187
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
