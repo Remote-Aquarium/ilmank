@@ -125,9 +125,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="260.26432"
-     inkscape:cy="594.7648"
+     inkscape:zoom="2"
+     inkscape:cx="1453.7637"
+     inkscape:cy="745.43308"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -2196,7 +2196,7 @@
       <path
          style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.255352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 397.27854,198.88652 -0.45141,28.79949 13.72264,0.99309 -0.72223,-28.70922 z"
-         id="path1666" />
+         id="trirroir_tapis" />
       <path
          style="fill:#4d4d4d;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 399.15367,201.54127 1.42655,-0.5145 4.44336,0.23386 0.81851,0.91206 1.59026,0.11693 -1.68381,-1.6838 -5.07476,-0.30402 -1.77737,0.88867 z"
@@ -3471,5 +3471,18 @@
          d="m 190.8445,147.72396 -0.10619,0.74013 0.9346,0.0356 -0.83909,0.6567 -0.0157,0.0392 -0.10044,0.73265"
          id="path4015-3-2" />
     </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -99.516421,20.548268 20.760965,3.657081 24.408037,-0.168487"
+       id="path5009" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -62.690636,42.972021 -5.406676,1.297498 -3.977306,3.030162 -0.862738,3.287392 1.415227,5.924651"
+       id="path5017" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.255986px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -96.544935,43.901998 6.013836,0.869716 3.723049,3.030162 0.807586,3.287392 -1.324756,5.924651"
+       id="path5017-7"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>
