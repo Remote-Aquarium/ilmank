@@ -8,15 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "GameObject",
+"language": "GDScript",
+"path": "res://scripts/object.gd"
+} ]
 _global_script_class_icons={
-
+"GameObject": ""
 }
 
 [application]
 
 config/name="Ilmank"
-run/main_scene="res://screens/game.tscn"
+run/main_scene="res://screens/main_menu.tscn"
 
 [autoload]
 

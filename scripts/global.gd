@@ -7,15 +7,25 @@ var foreground_ui = null
 var cursor = null
 
 func _ready():
-    change_scene()
+    change_scene(null)
 
 func _process(_delta):
     if Input.is_action_just_released("esc") and foreground_ui != null:
         focus_foreground(null)
 
-func change_scene():
-    room = $"/root/Game/RoomView"
-    cursor = $"/root/Game/Cursor"
+func change_scene(scene):
+    if scene == null:
+        room = get_node_or_null("/root/Game/RoomView")
+        cursor = get_node_or_null("/root/Game/Cursor")
+    else:
+        room = scene.get_node("RoomView")
+        cursor = scene.get_node("Cursor")
+        var root = get_tree().get_root()
+        for root_child in root.get_children():
+            root.remove_child(root_child)
+        root.add_child(scene)
+    if cursor == null:
+        cursor = get_node_or_null("/root/MainMenu/Cursor")
 
 func focus_foreground(node):
     if foreground_ui != null:

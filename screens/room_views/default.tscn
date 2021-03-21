@@ -17,8 +17,9 @@
 [ext_resource path="res://objects/furnitures/computer.tscn" type="PackedScene" id=15]
 [ext_resource path="res://objects/panel.tscn" type="PackedScene" id=16]
 [ext_resource path="res://objects/clock_behind.tscn" type="PackedScene" id=17]
+[ext_resource path="res://shaders/blur.shader" type="Shader" id=18]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 resource_name = "hide"
 length = 0.35
 step = 0.05
@@ -35,7 +36,7 @@ tracks/0/keys = {
 "values": [ Vector2( 574.715, 568.77 ), Vector2( 574.715, 758 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "pop"
 length = 0.35
 step = 0.05
@@ -52,21 +53,11 @@ tracks/0/keys = {
 "values": [ Vector2( 574.715, 768.77 ), Vector2( 574.715, 568.77 ) ]
 }
 
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
-
-uniform float amount: hint_range(0.0, 5.0);
-
-void fragment() {
-	COLOR.rgb = textureLod(SCREEN_TEXTURE, SCREEN_UV, amount).rgb;
-}
-"
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 18 )
 shader_param/amount = 3.0
 
-[sub_resource type="GradientTexture" id=3]
+[sub_resource type="GradientTexture" id=4]
 
 [node name="RoomView" type="Node2D"]
 script = ExtResource( 8 )
@@ -116,8 +107,8 @@ position = Vector2( 574.715, 758 )
 [node name="animators" type="Node2D" parent="."]
 
 [node name="panel" type="AnimationPlayer" parent="animators"]
-anims/hide = SubResource( 5 )
-anims/pop = SubResource( 4 )
+anims/hide = SubResource( 1 )
+anims/pop = SubResource( 2 )
 
 [node name="shaders" type="Control" parent="."]
 visible = false
@@ -130,12 +121,12 @@ __meta__ = {
 }
 
 [node name="blur" type="TextureRect" parent="shaders"]
-material = SubResource( 2 )
+material = SubResource( 3 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

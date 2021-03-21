@@ -112,6 +112,14 @@ for (( i=1; i<=3; i++ )); do
     gen "main" "diode_v_$i" "assets/panel/diodes/on-$i.png" 64
 done
 
+mkdir -p assets/ui/buttons
+buttons="partir,exit;option,settings;jouer,play"
+for button in $(IFS=';'; echo $buttons); do
+    IFS=',' read -r -a names <<< $button
+    gen "main" "bouton_${names[0]}_ouvert" "assets/ui/buttons/${names[1]}.png"
+    gen "main" "bouton_${names[0]}_ferme" "assets/ui/buttons/${names[1]}_pressed.png"
+done
+
 # Background
 
 gen "main" "sol_mur_et_ombre" "assets/background.png" 1920 1080
