@@ -4,9 +4,6 @@ var moon_good = false
 var cross_good = false
 var star_good = false
 
-func _ready():
-    pass
-
 func _on_totem_area_entered(area):
     var unlocked = false
     if area.name == "bible_book" and not cross_good:
@@ -22,6 +19,7 @@ func _on_totem_area_entered(area):
         self.star_good = true
         unlocked = true
     if unlocked:
+        Global.release(area)
         area.queue_free()
         if moon_good and cross_good and star_good and \
                 not Global.is_unlocked(Global.Features.TOTEM_FULL):
