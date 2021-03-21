@@ -69,6 +69,7 @@ for (( i=1; i<=5; i++ )); do
     gen "main" "tiroir_${i}_ouvert" "assets/drawers/$i-open.png"
     gen "main" "tiroir_$i" "assets/drawers/$i-closed.png"
 done
+gen "main" "tirroir_plein" "assets/drawers/inspected.png" 1024
 
 mkdir -p assets/screens
 gen "main" "ecran_1" "assets/screens/screen-off.png" 512
@@ -78,9 +79,9 @@ gen "main" "tournevis" "assets/screens/icons/settings.png" 64
 
 mkdir -p assets/totem
 obj "statue_vide" "totem"
-gen "main" "lune" "assets/totem/moon.png" 64
-gen "main" "etoile" "assets/totem/star.png" 64
-gen "main" "croix" "assets/totem/cross.png" 64
+gen "main" "lune" "assets/totem/moon.png"
+gen "main" "etoile" "assets/totem/star.png"
+gen "main" "croix" "assets/totem/cross.png"
 gen "main" "lune_vide" "assets/totem/moon_placeholder.png" 64
 gen "main" "etoile_vide" "assets/totem/star_placeholder.png" 64
 gen "main" "croix_vide" "assets/totem/cross_placeholder.png" 64
@@ -118,6 +119,9 @@ done
 
 mkdir -p assets/books
 gen "main" "livre_magique" "assets/books/magic_book.png" 128
+gen "main" "bible" "assets/books/bible.png" 128
+gen "main" "interieur_livre_musique" "assets/books/page_hits.png" 1024
+gen "main" "interieur_bible" "assets/books/page_bible.png" 1024
 
 mkdir -p assets/panel/diodes
 for (( i=1; i<=3; i++ )); do

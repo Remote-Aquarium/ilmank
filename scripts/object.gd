@@ -6,6 +6,8 @@ export var grabbable = false
 export var weight = 100
 export var smoothness = 25
 
+onready var initial_z_index = self.z_index
+
 var grabbing = false
 
 func _process(delta):
@@ -36,6 +38,10 @@ func _on_Object_input_event(_viewport, _event, _shape_idx):
 
 func grab(grab):
     self.grabbing = grab
+    if grabbing:
+        self.z_index = 100
+    else:
+        self.z_index = initial_z_index
     if grab:
         self.get_parent().move_child(self, self.get_parent().get_child_count())
 

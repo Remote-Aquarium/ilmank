@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
@@ -38,6 +38,11 @@
 [ext_resource path="res://assets/panel/radio/button-6.png" type="Texture" id=36]
 [ext_resource path="res://assets/panel/radio/button-3.png" type="Texture" id=37]
 [ext_resource path="res://assets/panel/radio/button-9-pressed.png" type="Texture" id=38]
+[ext_resource path="res://objects/books/thin_book.tscn" type="PackedScene" id=39]
+[ext_resource path="res://assets/books/page_hits.png" type="Texture" id=40]
+[ext_resource path="res://assets/books/page_bible.png" type="Texture" id=41]
+[ext_resource path="res://objects/artefact_star.tscn" type="PackedScene" id=42]
+[ext_resource path="res://assets/drawers/inspected.png" type="Texture" id=43]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -95,8 +100,11 @@ texture = ExtResource( 3 )
 [node name="painting" parent="objects" instance=ExtResource( 7 )]
 position = Vector2( 535.318, 203.426 )
 
+[node name="artefact_star" parent="objects" instance=ExtResource( 42 )]
+position = Vector2( 255.781, 602.87 )
+
 [node name="shelf" parent="objects" instance=ExtResource( 2 )]
-position = Vector2( 179.77, 375.111 )
+position = Vector2( 179.063, 374.404 )
 
 [node name="lamp" parent="objects" instance=ExtResource( 1 )]
 position = Vector2( 636.515, 31.3068 )
@@ -125,8 +133,84 @@ position = Vector2( 573.318, 665.539 )
 visible = false
 position = Vector2( 574.715, 758 )
 
-[node name="magic_book" parent="objects" instance=ExtResource( 19 )]
+[node name="books" type="Node2D" parent="objects"]
+
+[node name="magic_book" parent="objects/books" instance=ExtResource( 19 )]
 position = Vector2( 282, 466 )
+
+[node name="thin_book" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 256.993, 465.678 )
+
+[node name="thin_book2" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 236.777, 465.083 )
+
+[node name="thin_book3" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 220.722, 463.894 )
+scale = Vector2( 0.994629, 0.987119 )
+
+[node name="thin_book4" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 189.803, 463.894 )
+
+[node name="thin_book5" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 176.722, 463.3 )
+
+[node name="thin_book6" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 111.315, 462.11 )
+
+[node name="thin_book7" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 65.531, 378.866 )
+
+[node name="top_hits_book" parent="objects/books" instance=ExtResource( 39 )]
+modulate = Color( 0.8, 0.972549, 0.811765, 1 )
+position = Vector2( 82.7745, 380.055 )
+open_page_path = "top_hits_page"
+
+[node name="thin_book9" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 199.911, 376.487 )
+
+[node name="thin_book10" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 185.046, 377.082 )
+
+[node name="thin_book11" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 75.6392, 546.544 )
+
+[node name="thin_book12" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 92.2881, 545.95 )
+
+[node name="thin_book13" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 108.937, 545.95 )
+
+[node name="thin_book14" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 127.37, 545.95 )
+
+[node name="thin_book15" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 185.641, 292.648 )
+
+[node name="thin_book17" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 168.397, 293.243 )
+
+[node name="thin_book18" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 51.2605, 293.243 )
+
+[node name="thin_book19" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 67.3148, 292.648 )
+
+[node name="thin_book20" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 314.075, 196.323 )
+
+[node name="thin_book21" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 297.426, 196.323 )
+
+[node name="thin_book22" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 297.426, 196.323 )
+
+[node name="bible_book" parent="objects/books" instance=ExtResource( 39 )]
+modulate = Color( 0.866667, 0.407843, 0.407843, 1 )
+position = Vector2( 277.804, 198.106 )
+open_page_path = "bible_page"
+
+[node name="thin_book16" parent="objects/books" instance=ExtResource( 39 )]
+position = Vector2( 203.479, 293.243 )
 
 [node name="animators" type="Node2D" parent="."]
 
@@ -449,6 +533,63 @@ toggle_mode = true
 shortcut_in_tooltip = false
 texture_normal = ExtResource( 28 )
 texture_pressed = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="top_hits_page" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureRect" parent="top_hits_page"]
+margin_left = 166.855
+margin_top = -26.6968
+margin_right = 1190.85
+margin_bottom = 997.303
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bible_page" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureRect" parent="bible_page"]
+margin_left = 166.855
+margin_top = -26.6968
+margin_right = 1190.85
+margin_bottom = 997.303
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 41 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ui_drawer_inspected" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureRect" parent="ui_drawer_inspected"]
+margin_left = 229.08
+margin_top = 22.8007
+margin_right = 1253.08
+margin_bottom = 1046.8
+rect_scale = Vector2( 0.65, 0.65 )
+texture = ExtResource( 43 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

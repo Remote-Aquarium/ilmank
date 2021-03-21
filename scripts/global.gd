@@ -66,6 +66,7 @@ func is_grabbing():
 
 enum Features {
     PAINTING = 1 << 0,
+    TOTEM_FULL = 1 << 1,
     CARPET_UNDERGROUND_1 = 1 << 2,
     CARPET_UNDERGROUND_2 = 1 << 3,
     CARPET_UNDERGROUND_3 = 1 << 4,

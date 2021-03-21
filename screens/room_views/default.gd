@@ -2,6 +2,12 @@ extends "res://scripts/room.gd"
 
 func _ready():
     toggle_panel(false, false)
+    var objects = get_node("objects")
+    var books = objects.get_node("books")
+    for book in books.get_children():
+        books.remove_child(book)
+        objects.add_child(book)
+    books.queue_free()
 
 func unlock(feature):
     match feature:

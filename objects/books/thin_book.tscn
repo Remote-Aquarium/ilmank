@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/books/book.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/books/bible.png" type="Texture" id=2]
+
+[node name="thin_book" instance=ExtResource( 1 )]
+grabbable = true
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PoolVector2Array( -6.35563, 31.8443, -5.17578, -32.5751, 5.20683, -31.8672, 6.38668, 32.0803 )

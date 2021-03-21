@@ -6,7 +6,7 @@
 [node name="magic_book" instance=ExtResource( 2 )]
 grabbable = true
 
-[node name="magic_book" type="Sprite" parent="." index="0"]
+[node name="sprite" type="Sprite" parent="." index="0"]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 

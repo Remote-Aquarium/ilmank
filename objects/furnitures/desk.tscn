@@ -58,7 +58,7 @@ texture = ExtResource( 17 )
 
 [node name="drawers" type="Node2D" parent="." index="6"]
 script = ExtResource( 15 )
-codes_seq = [ 2, 4, 4 ]
+codes_seq = [ 3, 2, 4, 5, 2, 3 ]
 
 [node name="drawer1" parent="drawers" index="0" instance=ExtResource( 5 )]
 position = Vector2( -79.7629, -68.1383 )

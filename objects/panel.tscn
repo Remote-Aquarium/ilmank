@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/panel/panel_board.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/panel/locker.png" type="Texture" id=13]
 [ext_resource path="res://assets/panel/play_button.png" type="Texture" id=14]
 [ext_resource path="res://assets/panel/play_button_pressed.png" type="Texture" id=15]
+[ext_resource path="res://objects/artefact_moon.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "open"
@@ -79,7 +80,11 @@ position = Vector2( -15.5566, -21.4429 )
 scale = Vector2( 0.445, 0.445 )
 texture = ExtResource( 5 )
 
-[node name="locker" type="Sprite" parent="." index="5"]
+[node name="artefact_moon" parent="." index="5" instance=ExtResource( 16 )]
+position = Vector2( 3.11424, 10.2229 )
+
+[node name="locker" type="Sprite" parent="." index="6"]
+visible = false
 position = Vector2( 2.82083, 61.7581 )
 scale = Vector2( 0.675, 0.675 )
 texture = ExtResource( 13 )
@@ -87,7 +92,7 @@ texture = ExtResource( 13 )
 [node name="animator" type="AnimationPlayer" parent="locker" index="0"]
 anims/open = SubResource( 1 )
 
-[node name="radio_player" type="Area2D" parent="." index="6"]
+[node name="radio_player" type="Area2D" parent="." index="7"]
 
 [node name="collision" type="CollisionPolygon2D" parent="radio_player" index="0"]
 polygon = PoolVector2Array( -207.43, 52.1801, -71.7073, 55.3549, -57.4207, 134.328, -216.161, 125.201 )
