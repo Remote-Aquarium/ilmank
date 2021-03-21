@@ -442,9 +442,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="250.60419"
-     inkscape:cy="-135.27805"
+     inkscape:zoom="2"
+     inkscape:cx="1893.0129"
+     inkscape:cy="867.68065"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -3494,7 +3494,7 @@
     </g>
     <g
        id="bouton_tapis_ferme"
-       transform="translate(93.10984,-9.3232367)">
+       transform="translate(94.971561,-11.696959)">
       <path
          style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.304581px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 385.09008,213.17899 0.0189,5.19692 4.94945,0.15229 v -3.75016 l -0.51398,-1.2564 -1.08507,-0.51398 z"
@@ -3876,7 +3876,7 @@
        id="path3107"
        transform="scale(0.26458333)" />
     <g
-       id="bouton_option">
+       id="bouton_option_ferme">
       <path
          style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 115.05953,-84.423762 37.52315,-0.05924 -5.15681,23.351784 -15.6219,2.291834 -16.55735,0.09355 z"
