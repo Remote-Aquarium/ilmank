@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ilmank_main_theme-loop.ogg-06d867295f306fb7a0dc87e2c4355887.oggstr"
+
+[deps]
+
+source_file="res://sfx/music/ilmank_main_theme-loop.ogg"
+dest_files=[ "res://.import/ilmank_main_theme-loop.ogg-06d867295f306fb7a0dc87e2c4355887.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

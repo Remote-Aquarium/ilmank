@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/objects/shelf.png" type="Texture" id=2]
@@ -15,19 +15,20 @@
 [ext_resource path="res://assets/ui/buttons/settings.png" type="Texture" id=13]
 [ext_resource path="res://screens/main_menu.gd" type="Script" id=14]
 [ext_resource path="res://assets/ui/buttons/exit_pressed.png" type="Texture" id=15]
+[ext_resource path="res://jukebox.tscn" type="PackedScene" id=16]
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 8 )
 shader_param/amount = 2.2
 
-[sub_resource type="GradientTexture" id=1]
+[sub_resource type="GradientTexture" id=2]
 width = 1080
 
 [sub_resource type="DynamicFont" id=3]
 size = 24
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 76
 font_data = ExtResource( 5 )
 
@@ -115,12 +116,12 @@ __meta__ = {
 }
 
 [node name="shader" type="TextureRect" parent="UI"]
-material = SubResource( 4 )
+material = SubResource( 1 )
 margin_right = 1080.0
 margin_bottom = 720.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture = SubResource( 1 )
+texture = SubResource( 2 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -133,7 +134,7 @@ margin_top = 576.0
 margin_right = 610.0
 margin_bottom = 1068.0
 custom_fonts/font = SubResource( 3 )
-text = "Developer Notes:
+text = "Developer Note:
 
 The game contains a few bugs and is not entirely completed.
 We focused on implementing most of what we thought about and therefore didn't have the time to implemenent a save system, so if you quit the game you'll lose your progres."
@@ -169,7 +170,7 @@ __meta__ = {
 modulate = Color( 0.521569, 0.309804, 0.309804, 1 )
 margin_right = 537.0
 margin_bottom = 64.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "IlMank"
 align = 1
 valign = 1
@@ -232,10 +233,11 @@ __meta__ = {
 }
 
 [node name="background_animator" type="AnimationPlayer" parent="UI"]
-playback_speed = 0.2
 anims/blur = SubResource( 5 )
 
 [node name="Cursor" parent="." instance=ExtResource( 6 )]
+
+[node name="jukebox" parent="." instance=ExtResource( 16 )]
 [connection signal="pressed" from="UI/v_split_container/buttons/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="UI/v_split_container/buttons/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="UI/v_split_container/buttons/leave" to="." method="_on_leave_pressed"]
