@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
@@ -19,6 +19,25 @@
 [ext_resource path="res://objects/clock_behind.tscn" type="PackedScene" id=17]
 [ext_resource path="res://shaders/blur.shader" type="Shader" id=18]
 [ext_resource path="res://objects/books/magic_book.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/panel/radio/background.png" type="Texture" id=20]
+[ext_resource path="res://assets/panel/radio/button-1.png" type="Texture" id=21]
+[ext_resource path="res://assets/panel/radio/button-1-pressed.png" type="Texture" id=22]
+[ext_resource path="res://assets/panel/radio/button-4.png" type="Texture" id=23]
+[ext_resource path="res://assets/panel/radio/button-4-pressed.png" type="Texture" id=24]
+[ext_resource path="res://assets/panel/radio/button-2.png" type="Texture" id=25]
+[ext_resource path="res://assets/panel/radio/button-5-pressed.png" type="Texture" id=26]
+[ext_resource path="res://assets/panel/radio/button-8.png" type="Texture" id=27]
+[ext_resource path="res://assets/panel/radio/button-9.png" type="Texture" id=28]
+[ext_resource path="res://assets/panel/radio/button-7-pressed.png" type="Texture" id=29]
+[ext_resource path="res://assets/panel/radio/button-7.png" type="Texture" id=30]
+[ext_resource path="res://assets/panel/radio/button-6-pressed.png" type="Texture" id=31]
+[ext_resource path="res://assets/panel/radio/button-2-pressed.png" type="Texture" id=32]
+[ext_resource path="res://assets/panel/radio/button-8-pressed.png" type="Texture" id=33]
+[ext_resource path="res://assets/panel/radio/button-5.png" type="Texture" id=34]
+[ext_resource path="res://assets/panel/radio/button-3-pressed.png" type="Texture" id=35]
+[ext_resource path="res://assets/panel/radio/button-6.png" type="Texture" id=36]
+[ext_resource path="res://assets/panel/radio/button-3.png" type="Texture" id=37]
+[ext_resource path="res://assets/panel/radio/button-9-pressed.png" type="Texture" id=38]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -282,6 +301,154 @@ margin_bottom = 654.187
 rect_scale = Vector2( 0.25, 0.25 )
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ui_radio" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="ui_radio"]
+margin_left = 36.0
+margin_top = -138.0
+margin_right = 1060.0
+margin_bottom = 886.0
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musics" type="Control" parent="ui_radio"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="music1" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 172.609
+margin_top = 254.504
+margin_right = 428.609
+margin_bottom = 350.504
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music2" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 424.593
+margin_top = 257.024
+margin_right = 680.594
+margin_bottom = 353.024
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music3" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 671.538
+margin_top = 255.764
+margin_right = 927.538
+margin_bottom = 351.764
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 37 )
+texture_pressed = ExtResource( 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music4" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 167.569
+margin_top = 331.359
+margin_right = 423.569
+margin_bottom = 427.359
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music5" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 419.554
+margin_top = 336.399
+margin_right = 675.554
+margin_bottom = 432.399
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music6" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 667.758
+margin_top = 335.139
+margin_right = 923.758
+margin_bottom = 431.139
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 36 )
+texture_pressed = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music7" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 161.27
+margin_top = 409.474
+margin_right = 417.27
+margin_bottom = 505.474
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music8" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 414.514
+margin_top = 413.254
+margin_right = 670.514
+margin_bottom = 509.254
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 33 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music9" type="TextureButton" parent="ui_radio/musics"]
+margin_left = 657.679
+margin_top = 414.514
+margin_right = 913.679
+margin_bottom = 510.514
+rect_scale = Vector2( 0.85, 0.85 )
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 38 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

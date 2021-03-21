@@ -105,6 +105,16 @@ gen "main" "sous_tapis_plein" "assets/panel/panel_board.png" 1024 1024
 gen "main" "ombre_sous_tapis_ouvert" "assets/panel/panel_board_shadow.png" 1024 256
 gen "main" "batteries_pleines" "assets/panel/batteries_full.png"
 gen "main" "batteries_vides" "assets/panel/batteries_empty.png"
+gen "main" "tirroir_tapis" "assets/panel/locker.png"
+gen "main" "bouton_tapis_ouvert" "assets/panel/play_button.png" 64
+gen "main" "bouton_tapis_ferme" "assets/panel/play_button_pressed.png" 64
+
+mkdir -p assets/panel/radio
+gen "main" "fond_bouton_radio" "assets/panel/radio/background.png" 1024
+for (( i=1; i<=9; i++ )); do
+    gen "main" "bouton_radio_ouvert_$i" "assets/panel/radio/button-$i.png" 256 96
+    gen "main" "bouton_radio_ferme_$i" "assets/panel/radio/button-$i-pressed.png" 256 96
+done
 
 mkdir -p assets/books
 gen "main" "livre_magique" "assets/books/magic_book.png" 128
