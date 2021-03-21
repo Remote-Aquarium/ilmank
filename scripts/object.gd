@@ -4,7 +4,7 @@ class_name GameObject
 
 export var grabbable = false
 export var weight = 100
-export var smoothness = 25
+export var smoothness = 30
 
 onready var initial_z_index = self.z_index
 

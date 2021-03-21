@@ -117,11 +117,23 @@ for (( i=1; i<=9; i++ )); do
     gen "main" "bouton_radio_ferme_$i" "assets/panel/radio/button-$i-pressed.png" 256 96
 done
 
+mkdir -p assets/painting/icons
+gen "main" "sous_tableau" "assets/painting/painting_back.png" 512
+gen "main" "icone_san_marino" "assets/painting/icons/1.png" 128
+gen "main" "icone_domagano" "assets/painting/icons/2.png" 128
+gen "main" "icone_borgo_maggiorre" "assets/painting/icons/3.png" 128
+gen "main" "bouton_tableau_ferme" "assets/painting/button-pressed.png" 256 96
+gen "main" "bouton_tableau_ouvert" "assets/painting/button.png" 256 96
+gen "main" "ecran_tableau_1" "assets/painting/screen-default.png" 256 96
+gen "main" "ecran_tableau_2" "assets/painting/screen-wrong.png" 256 96
+gen "main" "ecran_tableau_3" "assets/painting/screen-good.png" 256 96
+
 mkdir -p assets/books
 gen "main" "livre_magique" "assets/books/magic_book.png" 128
 gen "main" "bible" "assets/books/bible.png" 128
 gen "main" "interieur_livre_musique" "assets/books/page_hits.png" 1024
 gen "main" "interieur_bible" "assets/books/page_bible.png" 1024
+gen "main" "interrieur_livre_san_marino" "assets/books/page_castles.png" 1024
 
 mkdir -p assets/panel/diodes
 for (( i=1; i<=3; i++ )); do

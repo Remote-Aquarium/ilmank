@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://objects/furnitures/lamp.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/furnitures/shelf.tscn" type="PackedScene" id=2]
@@ -43,6 +43,11 @@
 [ext_resource path="res://assets/books/page_bible.png" type="Texture" id=41]
 [ext_resource path="res://objects/artefact_star.tscn" type="PackedScene" id=42]
 [ext_resource path="res://assets/drawers/inspected.png" type="Texture" id=43]
+[ext_resource path="res://assets/books/page_castles.png" type="Texture" id=44]
+[ext_resource path="res://objects/painting_behind.tscn" type="PackedScene" id=45]
+[ext_resource path="res://objects/city_cards/castle_borgo.tscn" type="PackedScene" id=46]
+[ext_resource path="res://objects/city_cards/castle_domagnano.tscn" type="PackedScene" id=48]
+[ext_resource path="res://objects/city_cards/castle_san_marino.tscn" type="PackedScene" id=49]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hide"
@@ -78,6 +83,9 @@ tracks/0/keys = {
 "values": [ Vector2( 574.715, 768.77 ), Vector2( 574.715, 568.77 ) ]
 }
 
+[sub_resource type="Animation" id=5]
+resource_name = "hide_shelf"
+
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 18 )
 shader_param/amount = 3.0
@@ -97,8 +105,18 @@ texture = ExtResource( 3 )
 
 [node name="objects" type="Node2D" parent="."]
 
+[node name="painting_behind" parent="objects" instance=ExtResource( 45 )]
+position = Vector2( 534.292, 211.023 )
+
+[node name="castle_domagnano" parent="objects" instance=ExtResource( 48 )]
+position = Vector2( 537.295, 171.847 )
+
+[node name="castle_san_marino" parent="objects" instance=ExtResource( 49 )]
+position = Vector2( 504.08, 204.222 )
+
 [node name="painting" parent="objects" instance=ExtResource( 7 )]
-position = Vector2( 535.318, 203.426 )
+position = Vector2( 534.372, 211.398 )
+grabbable = true
 
 [node name="artefact_star" parent="objects" instance=ExtResource( 42 )]
 position = Vector2( 255.781, 602.87 )
@@ -148,11 +166,14 @@ position = Vector2( 236.777, 465.083 )
 position = Vector2( 220.722, 463.894 )
 scale = Vector2( 0.994629, 0.987119 )
 
+[node name="castle_borgo" parent="objects/books" instance=ExtResource( 46 )]
+position = Vector2( 183.32, 481.898 )
+
 [node name="thin_book4" parent="objects/books" instance=ExtResource( 39 )]
 position = Vector2( 189.803, 463.894 )
 
 [node name="thin_book5" parent="objects/books" instance=ExtResource( 39 )]
-position = Vector2( 176.722, 463.3 )
+position = Vector2( 176.722, 462.879 )
 
 [node name="thin_book6" parent="objects/books" instance=ExtResource( 39 )]
 position = Vector2( 111.315, 462.11 )
@@ -178,7 +199,9 @@ position = Vector2( 75.6392, 546.544 )
 position = Vector2( 92.2881, 545.95 )
 
 [node name="thin_book13" parent="objects/books" instance=ExtResource( 39 )]
-position = Vector2( 108.937, 545.95 )
+modulate = Color( 0.737255, 1, 0.976471, 1 )
+position = Vector2( 110.351, 545.95 )
+open_page_path = "castles_page"
 
 [node name="thin_book14" parent="objects/books" instance=ExtResource( 39 )]
 position = Vector2( 127.37, 545.95 )
@@ -217,6 +240,9 @@ position = Vector2( 203.479, 293.243 )
 [node name="panel" type="AnimationPlayer" parent="animators"]
 anims/hide = SubResource( 1 )
 anims/pop = SubResource( 2 )
+
+[node name="end" type="AnimationPlayer" parent="animators"]
+anims/hide_shelf = SubResource( 5 )
 
 [node name="shaders" type="Control" parent="."]
 visible = false
@@ -571,6 +597,25 @@ margin_right = 1190.85
 margin_bottom = 997.303
 rect_scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 41 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="castles_page" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureRect" parent="castles_page"]
+margin_left = 166.855
+margin_top = -26.6968
+margin_right = 1190.85
+margin_bottom = 997.303
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 44 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

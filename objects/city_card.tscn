@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
+
+[node name="city_card" instance=ExtResource( 1 )]
+grabbable = true
+weight = 10
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+scale = Vector2( 0.25, 0.25 )
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="1"]
+position = Vector2( 1.78583, -4.26614 )
+polygon = PoolVector2Array( -14.3806, 14.8614, -17.6546, -6.17167, 7.64457, -7.1638, 9.13276, -6.07246, 14.2918, 15.9527 )

@@ -71,6 +71,7 @@ enum Features {
     CARPET_UNDERGROUND_2 = 1 << 3,
     CARPET_UNDERGROUND_3 = 1 << 4,
     PANEL_LOCKER = 1 << 5,
+    CASTLES = 1 << 6
 }
 
 var unlocked_features = 0
