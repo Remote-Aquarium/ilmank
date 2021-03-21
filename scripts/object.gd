@@ -47,3 +47,6 @@ func grab(grab):
 
 func click_zoom():
     pass
+
+func end_game():
+    pass

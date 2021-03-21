@@ -1,5 +1,7 @@
 extends "res://scripts/room.gd"
 
+const GameObject = preload("res://scripts/object.gd")
+
 func _ready():
     toggle_panel(false, false)
     var objects = get_node("objects")
@@ -18,6 +20,12 @@ func unlock(feature):
         Global.Features.CARPET_UNDERGROUND_3:
             $objects/panel.enabled_diodes += 1
             $objects/panel.refresh_enabled_diodes()
+    if Global.is_unlocked(Global.Features.TOTEM_FULL) and Global.is_unlocked(Global.Features.CASTLES):
+        for object in $objects.get_children():
+            if object is GameObject:
+                object.end_game()
+        $animators/end.play("hide_shelf")
+        yield($animators/end, "animation_finished")
 
 func toggle_panel(state, animate=true):
     if state:

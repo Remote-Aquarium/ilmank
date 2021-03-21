@@ -57,6 +57,7 @@ function obj {
 mkdir -p assets/objects
 obj "bibliotheque" "shelf" 1024
 obj "tableau" "painting" 512
+obj "cactus" "cactus" 512
 obj "lampe" "lamp"
 
 obj "tour" "computer" 512
