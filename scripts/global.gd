@@ -9,8 +9,8 @@ var cursor = null
 func _ready():
     change_scene(null)
 
-func _process(_delta):
-    if Input.is_action_just_released("esc") and foreground_ui != null:
+func esc():
+    if foreground_ui != null:
         focus_foreground(null)
 
 func change_scene(scene):

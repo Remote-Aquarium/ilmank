@@ -1,6 +1,6 @@
 extends "res://scripts/object.gd"
 
-export (Texture) var batteries_empty
+export (Texture) var batteries_full
 
 export (Array, Texture) var off_diodes
 export (Array, Texture) var on_diodes
@@ -12,7 +12,10 @@ func _ready():
 
 func _on_batteries_area_entered(area):
     if area.name == "magic_book":
-        $batteries/sprite.texture = batteries_empty
+        $batteries/sprite.texture = batteries_full
+        Global.release(area)
+        area.queue_free()
+        Global.unlock(Global.Features.CARPET_UNDERGROUND_2)
 
 func refresh_enabled_diodes():
     self.enabled_diodes = min(3, enabled_diodes)

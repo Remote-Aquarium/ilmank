@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/panel/panel_board.png" type="Texture" id=2]
@@ -11,9 +11,11 @@
 [ext_resource path="res://assets/panel/diodes/on-1.png" type="Texture" id=9]
 [ext_resource path="res://assets/panel/diodes/on-2.png" type="Texture" id=10]
 [ext_resource path="res://assets/panel/diodes/on-3.png" type="Texture" id=11]
+[ext_resource path="res://assets/panel/batteries_full.png" type="Texture" id=12]
 
 [node name="panel" instance=ExtResource( 1 )]
 script = ExtResource( 4 )
+batteries_full = ExtResource( 12 )
 off_diodes = [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
 on_diodes = [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
 
@@ -33,7 +35,7 @@ scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 
 [node name="collision" type="CollisionPolygon2D" parent="batteries" index="1"]
-position = Vector2( -21.3268, 5.05106 )
+position = Vector2( -21.9214, 4.45646 )
 polygon = PoolVector2Array( -182.332, -32.8597, -190.47, 27.4726, -36.693, 35.0493, -42.3053, -32.5791 )
 
 [node name="diodes" type="Node2D" parent="." index="3"]

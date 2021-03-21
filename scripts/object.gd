@@ -16,10 +16,10 @@ func _process(delta):
     if grabbing:
         self.global_position = lerp(global_position, get_global_mouse_position(), smoothness * delta)
 
-func is_on_top():
+func is_on_top(ignore_brothers=true):
     for area in get_overlapping_areas():
         if not is_greater_than(area) and area.is_visible_in_tree():
-            if area as GameObject and area.weight < weight:
+            if ignore_brothers and area as GameObject and area.weight < weight:
                 continue
             return false
     return true

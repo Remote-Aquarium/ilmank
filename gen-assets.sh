@@ -106,6 +106,9 @@ gen "main" "ombre_sous_tapis_ouvert" "assets/panel/panel_board_shadow.png" 1024 
 gen "main" "batteries_pleines" "assets/panel/batteries_full.png"
 gen "main" "batteries_vides" "assets/panel/batteries_empty.png"
 
+mkdir -p assets/books
+gen "main" "livre_magique" "assets/books/magic_book.png" 128
+
 mkdir -p assets/panel/diodes
 for (( i=1; i<=3; i++ )); do
     gen "main" "diode_r_$i" "assets/panel/diodes/off-$i.png" 64
