@@ -945,8 +945,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.4046018"
-     inkscape:cx="327.99734"
-     inkscape:cy="462.25347"
+     inkscape:cx="184.8221"
+     inkscape:cy="407.24991"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1399,8 +1399,8 @@
          id="path4015-3-2" />
     </g>
     <g
-       id="g11285"
-       transform="translate(113.32399,9.6611644)">
+       id="porte_aliens"
+       transform="translate(114.12568,10.380306)">
       <path
          style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#393939;stroke-width:5.34506;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
          d="m -372.58741,668.1585 c -0.26977,-2.81585 -1.85763,-22.12469 -3.52859,-42.90854 -1.67095,-20.78385 -6.53539,-80.36244 -10.80986,-132.39687 -4.27447,-52.03443 -7.69773,-94.68435 -7.60725,-94.77759 0.23741,-0.24467 27.42888,-2.6886 121.86112,-10.95272 80.93494,-7.08292 83.68205,-7.27846 86.71438,-6.17234 1.72234,0.62827 3.13485,1.36308 3.13891,1.63291 0.004,0.26984 -0.945,11.2995 -2.10902,24.51037 -1.16401,13.21087 -4.68596,53.97239 -7.82656,90.58116 -3.1406,36.60876 -7.45901,86.63642 -9.59648,111.17258 -2.13747,24.53615 -4.21108,48.51443 -4.60804,53.28507 l -0.72174,8.67389 -82.20819,1.2359 -82.20818,1.23591 z"
@@ -1521,7 +1521,7 @@
     </g>
     <g
        id="bibliotheque"
-       transform="translate(-0.30533911,-0.58506519)">
+       transform="translate(0.07909519,-0.04010421)">
       <path
          style="opacity:0.448;fill:#241f1c;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 17.337138,192.90332 -0.11084,-1.78712 43.414554,-0.1861 -0.213376,4.22528 z"
