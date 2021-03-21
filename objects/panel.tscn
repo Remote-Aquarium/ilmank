@@ -84,7 +84,6 @@ texture = ExtResource( 5 )
 position = Vector2( 3.11424, 10.2229 )
 
 [node name="locker" type="Sprite" parent="." index="6"]
-visible = false
 position = Vector2( 2.82083, 61.7581 )
 scale = Vector2( 0.675, 0.675 )
 texture = ExtResource( 13 )
