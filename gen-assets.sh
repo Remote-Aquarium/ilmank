@@ -71,9 +71,10 @@ for (( i=1; i<=5; i++ )); do
 done
 
 mkdir -p assets/screens
-for (( i=1; i<=1; i++ )); do
-    gen "main" "ecran_$i" "assets/screens/screen-$i.png" 512
-done
+gen "main" "ecran_1" "assets/screens/screen-off.png" 512
+gen "main" "ecran_2_plein" "assets/screens/screen-on.png" 512
+mkdir -p assets/screens/icons
+gen "main" "tournevis" "assets/screens/icons/settings.png" 64
 
 mkdir -p assets/totem
 obj "statue_vide" "totem"

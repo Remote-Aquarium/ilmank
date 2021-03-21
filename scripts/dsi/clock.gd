@@ -10,6 +10,8 @@ onready var seconds_tick: AnimationPlayer = $clock_seconds/animation
 
 onready var ui_clock = Global.room.get_node("ui_clock")
 
+var screwed = true
+
 var hours = 0
 var minutes = 0
 var seconds = 0
@@ -56,3 +58,12 @@ func _on_time_change(time_type, rel_change):
         "seconds":
             set_seconds(self.seconds + rel_change)
     check_time()
+
+func _on_clock_area_entered(area):
+    if not screwed:
+        return
+    if area.name == "computer_screwdriver":
+        self.screwed = false
+        $screws/animator.play("unscrew")
+        yield($screws/animator, "animation_finished")
+        self.grabbable = true

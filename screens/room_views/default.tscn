@@ -85,7 +85,7 @@ texture = ExtResource( 3 )
 position = Vector2( 535.318, 203.426 )
 
 [node name="shelf" parent="objects" instance=ExtResource( 2 )]
-position = Vector2( 179.559, 379.521 )
+position = Vector2( 179.77, 375.111 )
 
 [node name="lamp" parent="objects" instance=ExtResource( 1 )]
 position = Vector2( 636.515, 31.3068 )

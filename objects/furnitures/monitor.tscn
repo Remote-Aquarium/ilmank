@@ -1,21 +1,72 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/objects/monitor.png" type="Texture" id=2]
-[ext_resource path="res://assets/screens/screen-1.png" type="Texture" id=3]
+[ext_resource path="res://assets/screens/screen-off.png" type="Texture" id=3]
+[ext_resource path="res://scripts/dsi/monitor.gd" type="Script" id=4]
+[ext_resource path="res://assets/screens/screen-on.png" type="Texture" id=5]
+[ext_resource path="res://assets/screens/icons/settings.png" type="Texture" id=6]
+[ext_resource path="res://scripts/dsi/computer_icon.gd" type="Script" id=7]
 
 [node name="monitor" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
 
-[node name="screen" type="Sprite" parent="." index="0"]
+[node name="collision" type="CollisionPolygon2D" parent="." index="0"]
+position = Vector2( 2.82843, 2.12131 )
+polygon = PoolVector2Array( -129.345, -80.3785, -122.865, 32.1886, -24.3487, 29.7192, -19.997, 55.3485, -67.5578, 56.2568, -84.5946, 65.5765, -12.6216, 65.1041, 53.6817, 64.7891, 43.1237, 54.7101, -4.43213, 55.0247, -5.81049, 27.8952, 100.459, 25.0975, 97.4747, -83.6165 )
+
+[node name="context_bridge" type="Area2D" parent="." index="1"]
+
+[node name="collision" type="CollisionPolygon2D" parent="context_bridge" index="0"]
+position = Vector2( 0.471939, 0 )
+polygon = PoolVector2Array( -146.153, -90.0812, -134.827, 51.9719, 126.154, 39.2296, 120.491, -99.9919 )
+
+[node name="screens" type="Node2D" parent="." index="2"]
+
+[node name="default" type="Node2D" parent="screens" index="0"]
+
+[node name="screen" type="Sprite" parent="screens/default" index="0"]
 position = Vector2( -10.9214, -25.0322 )
 scale = Vector2( 0.427414, 0.427414 )
 texture = ExtResource( 3 )
 
-[node name="sprite" type="Sprite" parent="." index="1"]
+[node name="powered_on" type="Node2D" parent="screens" index="1"]
+
+[node name="screen" type="Sprite" parent="screens/powered_on" index="0"]
+position = Vector2( -10.9214, -25.0322 )
+scale = Vector2( 0.427414, 0.427414 )
+texture = ExtResource( 5 )
+
+[node name="computer_screwdriver" type="Area2D" parent="screens/powered_on" index="1"]
+position = Vector2( -95.3313, -5.66325 )
+script = ExtResource( 7 )
+grabbable = true
+weight = 10
+smoothness = 50
+
+[node name="computer" type="Node2D" parent="screens/powered_on/computer_screwdriver" index="0"]
+
+[node name="sprite" type="Sprite" parent="screens/powered_on/computer_screwdriver/computer" index="0"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 6 )
+
+[node name="collision" type="CollisionPolygon2D" parent="screens/powered_on/computer_screwdriver/computer" index="1"]
+position = Vector2( 96.7471, 5.1913 )
+polygon = PoolVector2Array( -108.137, -13.1244, -85.2445, -13.4217, -84.9472, 4.41644, -107.542, 4.41644 )
+
+[node name="wild" type="Node2D" parent="screens/powered_on/computer_screwdriver" index="1"]
+visible = false
+
+[node name="sprite" type="Sprite" parent="screens/powered_on/computer_screwdriver/wild" index="0"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="collision" type="CollisionPolygon2D" parent="screens/powered_on/computer_screwdriver/wild" index="1"]
+position = Vector2( 95.8033, 5.66325 )
+polygon = PoolVector2Array( -113.118, -23.0661, -78.6664, -24.9539, -78.1944, 9.9695, -111.23, 11.8572 )
+
+[node name="sprite" type="Sprite" parent="." index="3"]
 position = Vector2( 9.00542, -6.88651 )
 scale = Vector2( 0.529, 0.529 )
 texture = ExtResource( 2 )
-
-[node name="collision" type="CollisionPolygon2D" parent="." index="2"]
-position = Vector2( 2.82843, 2.12131 )
-polygon = PoolVector2Array( -129.345, -80.3785, -122.865, 32.1886, -24.3487, 29.7192, -19.997, 55.3485, -67.5578, 56.2568, -84.5946, 65.5765, -12.6216, 65.1041, 53.6817, 64.7891, 43.1237, 54.7101, -4.43213, 55.0247, -5.81049, 27.8952, 100.459, 25.0975, 97.4747, -83.6165 )
+[connection signal="input_event" from="screens/powered_on/computer_screwdriver" to="screens/powered_on/computer_screwdriver" method="_on_Object_input_event"]

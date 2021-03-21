@@ -1,6 +1,9 @@
 extends Area2D
 
+class_name GameObject
+
 export var grabbable = false
+export var weight = 100
 export var smoothness = 25
 
 var grabbing = false
@@ -14,11 +17,11 @@ func _process(delta):
         self.global_position = lerp(global_position, get_global_mouse_position(), smoothness * delta)
 
 func is_on_top():
-    var areas = get_overlapping_areas()
-    if areas.size() > 0:
-        for area in areas:
-            if not is_greater_than(area) and area.is_visible_in_tree():
-                return false
+    for area in get_overlapping_areas():
+        if not is_greater_than(area) and area.is_visible_in_tree():
+            if area as GameObject and area.weight < weight:
+                continue
+            return false
     return true
 
 func _on_Object_input_event(_viewport, _event, _shape_idx):

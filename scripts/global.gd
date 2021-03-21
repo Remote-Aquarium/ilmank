@@ -49,6 +49,9 @@ func release(object):
         if cursor != null:
             cursor.set_grabbing(false)
 
+func is_grabbing():
+    return current_grab != null
+
 # Features
 
 enum Features {

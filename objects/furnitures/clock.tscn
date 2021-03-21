@@ -135,6 +135,7 @@ tracks/5/keys = {
 [node name="clock" instance=ExtResource( 2 )]
 script = ExtResource( 6 )
 grabbable = true
+weight = 50
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 position = Vector2( -4.45841, -0.45687 )
@@ -184,21 +185,19 @@ anims/time = SubResource( 3 )
 
 [node name="screw1" type="Sprite" parent="screws" index="0"]
 position = Vector2( -25.6618, -40.9897 )
-rotation = -12.5664
-scale = Vector2( 0.015, 0.015 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 7 )
 
 [node name="screw2" type="Sprite" parent="screws" index="1"]
 position = Vector2( 26.6641, -37.1006 )
-rotation = -12.5664
-scale = Vector2( 0.015, 0.015 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 7 )
 
 [node name="screw3" type="Sprite" parent="screws" index="2"]
 position = Vector2( -9.22156, 41.0347 )
-rotation = -12.5664
-scale = Vector2( 0.015, 0.015 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 7 )
 
 [node name="animator" type="AnimationPlayer" parent="screws" index="3"]
 anims/unscrew = SubResource( 4 )
+[connection signal="area_entered" from="." to="." method="_on_clock_area_entered"]

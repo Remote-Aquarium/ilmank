@@ -12,7 +12,7 @@ func toggle():
 
 func _on_lever_input_event(_viewport, event, _shape_idx):
     if event is InputEventMouseButton and event.is_pressed() and event.button_mask == BUTTON_LEFT:
-        if not is_on_top():
+        if not is_on_top() or Global.is_grabbing():
             return
         toggle()
 
